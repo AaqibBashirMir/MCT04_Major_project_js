@@ -11,3 +11,8 @@ UI:
 <img width="1424" alt="Screenshot 2023-11-16 at 1 46 16 AM" src="https://github.com/AaqibBashirMir/MCT04_Major_project_js/assets/42855900/e8715ba5-d851-4500-8207-075fa55b5e24">
 <img width="1425" alt="Screenshot 2023-11-16 at 1 46 29 AM" src="https://github.com/AaqibBashirMir/MCT04_Major_project_js/assets/42855900/2955f386-d663-4008-805e-cd9dd609b23f">
 <img width="506" alt="Screenshot 2023-11-16 at 1 46 58 AM" src="https://github.com/AaqibBashirMir/MCT04_Major_project_js/assets/42855900/ed073ec3-cb44-4766-932f-e08317d04079">
+
+
+Explanation:
+
+
