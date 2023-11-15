@@ -1,0 +1,297 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to right, rgb(20, 111, 111), rgb(194, 194, 161), rgb(20, 111, 111));
+}
+
+header {
+    margin: 20px;
+}
+
+header h1 {
+    padding: 10px;
+    color: white;
+
+}
+
+/* Board Container */
+main .container {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+}
+
+
+/* Board CSS */
+.board {
+    min-width: 290px;
+    width: 290px;
+    height: 100%;
+    overflow-y: auto;
+    flex-basis: 290px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    gap: 20px;
+    color: #17394d;
+}
+
+.board-in {
+    background-color: rgb(223 227 230/55%);
+    padding: 15px;
+    border-radius: 3px;
+}
+
+.board-card {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    gap: 10px;
+    overflow-y: auto;
+    cursor: pointer;
+    width: 90%;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.board-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+    cursor: pointer;
+    width: 90%;
+    margin: 10px;
+}
+
+.board-more-btn {
+    text-align: center;
+}
+
+.card-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    /* gap: 10px; */
+    border-radius: 10px;
+    box-shadow: 0 12px 12px rgb(0 0 0/9%), 0 6px 6px rgb(0 0 0/6%);
+    cursor: pointer;
+    width: 100%;
+}
+
+.board-add-card {
+    color: #000;
+    box-shadow: 1px 1px 0 1px rgba(0, 0, 0, .12);
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 10px;
+    transition: .2s;
+    font-size: 12px;
+    background-color: beige;
+}
+
+.board-add-card:hover {
+    background-color: rgb(153, 138, 138);
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-top-labels {
+    flex: 3 1;
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 5px;
+    gap: 5px;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.card-top-labels label {
+    background-color: rgb(206, 107, 123);
+    width: fit-content;
+    border-radius: 40px;
+    padding: 4px 12px;
+    color: white;
+}
+
+.card-top-more {
+    font-weight: bolder;
+    text-align: center;
+    display: none;
+}
+
+/* add cards */
+.board-add-card-edit {
+    padding: 10px;
+}
+
+card-edit {
+    background-color: #fff;
+    border-radius: 10px;
+}
+.custom-input{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    
+}
+.custom-input input{
+    display: flex;
+    gap: 20px;
+    /* margin-top: 10px; */
+    align-items: center;
+    justify-content: start;
+    padding: 8px;
+    width: 100%;
+    border-radius:5px ;
+    border: none ;
+}
+.custom-input-foot{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+.custom-input-foot button {
+    padding: 10px;
+    font-size: small;
+    background-color: #0079bf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.close {
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.custom-input-edit span {
+    border: 2px solid #0079bf;
+    border-radius: 5px;
+    /* outline: none; */
+    font-size: 1rem;
+    padding: 10px;
+    width: 200px;
+}
+
+/* Add Board */
+
+.add_board {
+    background-color: rgba(255, 255, 255, 0.613);
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .12);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.description{
+   display: flex;
+   flex-direction: row;
+   justify-content: start;
+}
+.delete-btn{
+    box-shadow: 0 54px 55px rgba(0,0,0,.25), 0 -12px 30px rgba(0,0,0,.12), 0 4px 6px rgba(0,0,0,.12), 0 12px 13px rgba(0,0,0,.17), 0 -3px 5px rgba(0,0,0,.09);
+    cursor: default;
+    position:absolute;
+    z-index: 1;
+    background-color: #fff;
+    color: #00000095;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+/* board on pop up */
+.main{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,.46);
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+.container_1{
+    height: 80vh;
+    width: 30%;
+    border: 2px solid rgba(0, 0, 0, 0.48);
+    margin: 30px;
+    border-radius:5px ;
+    padding: 30px;
+    background-color: white;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+li {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+.task,#title,.label,.desc{
+    padding: 10px;
+    background-color: antiquewhite;
+    width: 80px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.custom-title,.custom-desc,.custon-date,.custon-label{
+    height: 80px;
+    margin-bottom: 10px;
+}
+.custon-label{
+    margin-bottom: 80px;
+}
+#date_board{
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: antiquewhite;
+  font-size: large;
+}
