@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Samsung Store</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" 
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- nav bar -->
+    <nav class="navbar">
+        <div class="navbar-center">
+          
+           <span class="nav-icon">
+               <i class="fas fa-bars"></i>
+           </span> 
+           <h2>WELCOME TO HODDIE WORLD</h2>
+            <div class="cart-btn">
+               <span class="nav-icon">
+                   <i class="fas fa-cart-plus"></i>
+               </span> 
+               <div class="cart-items">0</div>
+            </div>
+        </div>
+    </nav>
+    <!-- end of navbar -->
+    <!-- poster-->
+    <header class="hero">
+        <div class="banner">
+           <h1 class="banner-title">Dollars To Wear Fearless Hoddie</h1>
+           <button class="banner-btn">Eyes Down , Guts Up!!</button>  
+        </div>
+    </header>
+    <!-- end of poster-->
+    <!-- products -->
+    <section class="products">
+        <div class="section-title">
+            <h2>Our Products</h2>
+        </div>
+        <div class="products-center">
+            
+        </div>
+    </section> 
+    <!-- end of products -->
+    <!-- cart -->
+        <div class="cart-overlay">
+            <div class="cart">
+               <span class="close-cart">
+                   <i class="fas fa-window-close"></i>
+               </span> 
+               <h2>Your cart</h2>
+               <div class="cart-content">
+                  <!-- cart item -->
+                    <!--<div class="cart-item">
+                      
+                    </div>
+                  <!-- end of cart item --> 
+               </div>
+                <div class="cart-footer">
+                    <h3>your total:  <span class="cart-total">0</span></h3>
+                    <button class="clear-cart banner-btn">clear cart</button>
+                    <!-- Smart Button Container -->
+                    <div class="smart-btn" id="smart-button-container">
+                      <div style="text-align: center;">
+                        <div id="paypal-button-container"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+          <div class="footer-container">
+              <div class="footer-content">
+                  <h3 style="font-weight: 700; color: black; text-shadow: 2px 1px 2px red;">Contact Us</h3>
+                  <p style="color: black; font-family:'Courier New', Courier, monospace ; font-weight: 700;">Email: hoddiedoddie@gmail.com</p>
+                  <p style="color: black; font-family:'Courier New', Courier, monospace ; font-weight: 700;">Phone: 9090909090</p>
+              </div>
+  
+              <div class="footer-content">
+                  <h3 style="font-weight: 700; color: black; text-shadow: 2px 1px 2px red;">Follow Us</h3>
+                  <a style="color: black; font-family:'Courier New', Courier, monospace ; font-weight: 700;" href="#" target="_blank">Facebook</a>
+                  <a style="color: black; font-family:'Courier New', Courier, monospace ; font-weight: 700;" href="#" target="_blank">Twitter</a>
+                  <a style="color: black; font-family:'Courier New', Courier, monospace ; font-weight: 700;" href="#" target="_blank">Instagram</a>
+              </div>
+  
+              <div class="footer-content">
+                  <h3 style="font-weight: 700; color: black; text-shadow: 2px 1px 2px red;">Address</h3>
+                  <p style="color: black; font-family:'Courier New', Courier, monospace ; font-weight: 700;">24-A Lake Gardens (Sub Office)  </p>
+                  <p style="color: black; font-family:'Courier New', Courier, monospace ; font-weight: 700;">Kolkata, West Bengal (WB), India (IN)</p>
+              </div>
+          </div>
+      </footer>
+    <!-- end of cart-->
+    <!-- java script -->
+
+    <!-- smart button -->
+
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+   <script src="./main.js"></script> 
+  
+</body>
+</html>
