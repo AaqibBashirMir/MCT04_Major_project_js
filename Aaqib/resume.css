@@ -1,0 +1,455 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: rgb(243, 243, 243);
+
+}
+#navbar{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: fixed; */
+    /* border: red 2px solid; */
+    padding: 10px;
+
+}
+
+
+#resume-logo{
+    margin: 6px;
+}
+#download-btn{
+    margin: 6px;
+    display: flex;
+    align-items: center;
+    background-color: green;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    width: 130px;
+    border-radius: 4px;
+    height: 30px;
+
+}
+
+
+#download-pdf{
+    background-color: green;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 2px;
+    width: 100px;
+
+}
+#download-pdf:hover{
+    background-color: darkgreen;
+}
+#download-btn:hover{
+    background-color: darkgreen;
+
+}
+#body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    gap: 40px;
+    padding: 10px;
+    /* border: 1px blue solid; */
+}
+
+#template-type{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+}
+#template-type-text{
+    font-weight: bold;
+    font-size: 15px;
+}
+#type{
+    width: 450px;
+    height: 25px;
+    /* border: 2px blue solid; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#header-color{
+    font-weight: bold;
+    font-size: 15px;
+}
+#header-text-color{
+    font-weight: bold;
+    font-size: 15px;
+}
+#personal-detail-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 450px;
+    font-size: 15px;
+    font-weight: bold;
+}
+#name,#email,#number,#city{
+    border: none;
+    height:30px;
+    padding: 4px;
+    outline: none;
+    
+}
+
+#proffesional-detail-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 450px;
+    font-size: 15px;
+    font-weight: bold;
+}
+#job-title,#job-skill{
+    border: none;
+    height:30px;
+    padding: 4px;
+    outline: none;
+}
+#job-desc{
+    outline: none;
+    border: none;
+    padding: 4px;
+    overflow: hidden;
+}
+
+#outer-employement-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 450px;
+    font-size: 15px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#inner-employement-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 450px;
+    font-size: 15px;
+    /* border: 1px red solid; */
+    box-sizing: border-box;
+    /* height: auto; */
+    /* display: none;  */
+
+}
+#inner-empl-parent{
+    display: none;
+}
+
+#add-employe{
+    height: 30px;
+    background-color: brown;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: bisque;
+}
+#add-employe:hover{
+    cursor: pointer;
+    background-color: darkred;
+}
+
+
+#emp-start-date,#emp-end-date,#emp-title,#employer{
+ 
+    border: none;
+    height:30px;
+    padding: 4px;
+    outline: none;
+}
+#emp-desc{
+    outline: none;
+    border: none;
+    padding: 4px;
+    overflow-y: hidden;
+}
+
+#outer-project-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 450px;
+    font-size: 15px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#inner-education-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 450px;
+    font-size: 15px;
+    /* display: none; */
+
+}
+#inner-edu-parent{
+    display: none;
+}
+#outer-education-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 450px;
+    font-size: 15px;
+    font-size: 15px;
+    font-weight: 500;
+}
+#edu-desc{
+    outline: none;
+    border: none;
+    padding: 4px;
+    overflow-y: hidden;
+}
+#edu-btn{
+    height: 30px;
+    background-color: brown;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: bisque;
+}
+#edu-btn:hover{
+    cursor: pointer;
+    background-color: darkred;
+}
+
+#edu-start-date,#edu-end-date,#edu-qualif,#edu-sch-colleg{
+    border: none;
+    height:30px;
+    padding: 4px;
+    outline: none;
+}
+
+
+#proj-start-date,#proj-end-date,#proj-title{
+    border: none;
+    height:30px;
+    padding: 4px;
+    outline: none;
+}
+#proj-desc{
+    outline: none;
+    border: none;
+    padding: 4px;
+    overflow-y: hidden;
+}
+
+
+
+#inner-project-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 450px;
+    font-size: 15px;
+    /* display: none; */
+
+}
+#inner-proj-parent{
+    display: none;
+}
+#project-btn{
+    height: 30px;
+    background-color: brown;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: bisque;
+}
+#project-btn:hover{
+    cursor: pointer;
+    background-color: rgb(139, 0, 0);
+}
+
+
+
+
+#parent-container{
+    display: flex;
+    flex-direction:row;
+    gap: 5px;
+}
+#resume-field{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 20px 150px;
+    /* border: 1px red solid; */
+    box-shadow: 0 0 5px gray;
+    overflow-y: hidden;
+    width: 650px;
+    height: 1000px;
+    /* display: none; */
+    overflow-x: hidden;
+}
+
+#res-header{
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: 650px;
+    padding: 15px;
+    background-color:rgb(74,82,104);
+}
+#res-name{
+    font-size: 25px;
+    font-weight: bold;
+    /* border: 1px red solid; */
+    margin-left: 10px;
+    width: 220px;
+    word-wrap: break-word;
+}
+#res-job-title{
+    margin: 10px;
+    /* border: 1px red solid; */
+    padding-left: -20px;
+    height: auto;
+    width: 200px;
+    word-wrap: break-word;
+}
+#res-header-cont{
+    /* border: 1px green solid; */
+    height: auto;
+    width: 200px;
+    /* word-wrap: break-word; */
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+#res-cont-phone,#res-cont-mail,#res-cont-location,#header-cont-phone,#header-cont-mail,#header-cont-location{
+    /* border: green 1px solid; */
+    width: 180px;
+    word-wrap: break-word;
+}
+
+
+#res-body{
+    display: flex;
+    flex-direction: row;
+    /* margin: 10px; */
+    /* gap: 15px; */
+}
+#res-bdy-right{
+    padding: 10px;
+    background-color: rgba(42, 126, 165, 0.116);
+    height: 1000px;
+    width: 450px;
+}
+#res-bdy-left{
+    background-color: lightgray;
+    height: 1000px;
+    padding: 10px;
+    /* box-shadow: 0 0 5px lightgray; */
+ 
+}
+#res-cont-text,#res-skill-text,#summary-tex,#res-bdy-right-exp-text,#res-bdy-right-proj-text,#res-bdy-right-edu-text{
+    font-weight: bold;
+    color:rgb(243, 243, 243);
+    background-color: rgb(30, 31, 30);
+    padding: 4px;
+}
+#res-bdy-ryt-contain{
+    /* border: 1px red solid; */
+    max-height: 80px;
+    font-size: 15px;
+    font-weight: 500;
+    overflow: hidden;
+}
+#res-bdy-rt-exp-contain{
+    /* border: 1px red solid; */
+    max-height: 200px;
+    font-size: 15px;
+    font-weight: 500;
+    overflow: hidden;
+}
+#res-bdy-rt-proj-contain{
+    /* border: 1px red solid; */
+    max-height: 60px;
+    font-size: 15px;
+    font-weight: 500;
+    overflow: hidden;
+}
+#res-bdy-rt-edu-contain{
+    /* border: 1px red solid; */
+    max-height: 200px;
+    font-size: 15px;
+    font-weight: 500;
+    overflow: hidden;
+}
+
+#skills{
+    /* border: red 1px solid; */
+    word-wrap: break-word;
+    width: 190px;
+    font-weight: 500;
+    font-size: 15px;
+}
+#res-bdy-ryt-contain,#res-bdy-rt-proj-contain,#res-bdy-rt-exp-contain,#res-bdy-rt-edu-contain{
+    /* border: red 1px solid; */
+    width: 400px;
+    word-wrap: break-word;
+}
+
+#clear-btn{
+    background-color: rgb(121, 118, 118);
+    height: 20px;
+    width: 150px;
+    border: none;
+    text-align: center;
+    color: white;
+}
+
+
+
+ /* media querries */
+ @media only screen and (max-width: 1200px){
+    #parent-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 600px;
+    }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

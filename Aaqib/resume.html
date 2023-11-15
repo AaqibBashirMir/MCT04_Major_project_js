@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./resume.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=10">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav id="navbar">
+        <div id="resume-logo"><span class="material-symbols-outlined"
+                style="color: rgba(38, 141, 172, 0.589);font-size: 25px;font-weight: bold;">
+                description
+            </span></div>
+        <div id="download-btn">
+            <span class="material-symbols-outlined">arrow_downward</span>
+            <button id="download-pdf">Download PDF</button>
+        </div>
+    </nav>
+    <div id="parent-container">
+        <!-- body starting -->
+        <div id="body">
+            <!-- template type part -->
+            <div id="template-type">
+                <p id="template-type-text">Template Type</p>
+                <select name="templeType" id="type">
+                    <option value="choose">....Choose....</option>
+                    <option value="Two-Column" id="two">Two-Column</option>
+                    <option value="Minimalist" id="min">Minimalist</option>+
+                </select>
+
+            </div>
+
+            <div id="header-color-changers">
+                <!-- hheader color changer -->
+                <p id="header-bg-color">Header Background Color</p>
+                <input id="bg-color" type="color" style="margin-bottom: 10px;">
+
+                <!-- header text color changer -->
+                <p id="header-text-color">Header-Text Color</p>
+                <input type="color" id="text-col">
+            </div>
+
+            <!-- personal detail  thta input user will give -->
+            <div id="personal-detail-container">
+                <p id="personal-detail">Personal Details</p>
+                <input type="text" placeholder="Name" id="name" class="personal-name" maxlength="70">
+                <input type="text" placeholder="E-mail ID" id="email" class="personal-name" maxlength="70">
+                <input type="tel" placeholder="Phone Number" id="num" class="personal-name" maxlength="16">
+                <input type="text" placeholder="City, Country" id="city" class="personal-name" maxlength="70">
+            </div>
+
+            <!-- profesional details input user -->
+            <div id="proffesional-detail-container">
+                <p id="proffesional-details">Professional Details</p>
+                <input type="text" placeholder="Wanted job title" id="job-title" maxlength="70">
+                <textarea name="" id="job-desc" cols="30" rows="5" placeholder="Description" maxlength="202"></textarea>
+                <input type="text" placeholder="Skills" id="job-skill" maxlength="70">
+            </div>
+
+            <!-- employement part input user -->
+            <div id="outer-employement-container">
+                <button id="add-employe">Add Employment</button>
+                <div id="inner-empl-parent">
+                    <div id="inner-employement-container">
+                        <p id="emp-start">Start</p>
+                        <input type="date" id="emp-start-date">
+                        <p id="emp-End">End</p>
+                        <input type="date" id="emp-end-date" maxlength="70">
+                        <input type="text" id="emp-title" placeholder="job title" maxlength="70">
+                        <input type="text" id="employer" placeholder="Employer" maxlength="70">
+                        <textarea maxlength="202" name="" id="emp-desc" cols="30" rows="5"
+                            placeholder="Description"></textarea>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- project section and onclock button is also user input here -->
+            <div id="outer-project-container">
+                <button id="project-btn">Add Project</button>
+                <div id="inner-proj-parent">
+                    <div id="inner-project-container">
+                        <p id="proj-start">Start</p>
+                        <input type="date" id="proj-start-date">
+                        <p id="proj-end">End</p>
+                        <input type="date" id="proj-end-date">
+                        <input type="text" id="proj-title" placeholder="Project-title" maxlength="70">
+                        <textarea maxlength="300" name="" id="proj-desc" cols="30" rows="5"
+                            placeholder="Description"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- education details and onclock button is also user input here  -->
+            <div id="outer-education-detail">
+                <h3 id="education-title">Educational Background</h3>
+                <button id="edu-btn">Add Education</button>
+                <div id="inner-edu-parent">
+                    <div id="inner-education-detail">
+                        <p id="edu-start">Start</p>
+                        <input type="date" id="edu-start-date">
+                        <p id="edu-end">End</p>
+                        <input type="date" id="edu-end-date">
+                        <input type="text" id="edu-qualif" placeholder="Qualification" maxlength="70">
+                        <input type="text" id="edu-sch-colleg" placeholder="School/College">
+                        <textarea maxlength="300" id="edu-desc" cols="30" rows="5" placeholder="Description"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- now resume field that will be create with above input information-->
+        <div id="resume-field">
+            <!-- resume header here -->
+            <div id="res-header">
+                <div id="res-header-img-name">
+                    <!-- here is important html of image that any user can upload his/her -->
+                    <div class="imageUpload">
+                        <p><img src="download (4).jpg" id="output" width="110" height="110"
+                                style="border-radius: 50%;" /></p>
+                        <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"
+                                style="border: none;width: 80px;border-radius: 4px;margin-left: 14px;"></p>
+                    </div>
+                    <!-- name and job in the header -->
+                    <div id="res-header-flex">
+                        <h3 id="res-name">
+                            Aaqib Bashir Mir
+                        </h3>
+                        <h5 id="res-job-title">
+                            SDE at Amazon
+                        </h5>
+                    </div>
+                </div>
+                <!-- res header contact part here -->
+                <div id="res-header-cont">
+                    <p style="display: flex;"><span class="material-symbols-outlined">
+                            call
+                        </span><span id="header-cont-phone" style="   font-weight: 500;
+                        font-size: 15px;">+91
+                            67367433673</span></p>
+                    <p style="display: flex;flex-direction: row;"><span class="material-symbols-outlined">
+                            mail
+                        </span><span id="header-cont-mail" style="   font-weight: 500;
+                            font-size: 15px;">dazzlingmustakeen@gmail.com</span></p>
+                    <p style="display: flex;flex-direction: row;"><span class="material-symbols-outlined">
+                            location_on
+                        </span><span id="header-cont-location" style="   font-weight: 500;
+                        font-size: 15px;"> Jammu and
+                            Kashmir India
+                        </span></p>
+                </div>
+            </div>
+
+            <!-- resbody part from here -->
+            <div id="res-body">
+                <!-- resume body left side -->
+                <div id="res-bdy-left">
+                    <div id="res-skill-field">
+                        <p id="res-skill-text">SKILLS</p>
+                        <div id="skills">
+                           
+                        </div><br>
+                    </div>
+                    <!--  left-body contact side  here -->
+                    <div id="res-contact-field" style="display: flex;flex-direction: column;">
+                        <p id="res-cont-text">Contact</p>
+                        <p style="display: flex;"><span class="material-symbols-outlined">
+                                call
+                            </span><span id="res-cont-phone" style="   font-weight: 500;
+                                font-size: 15px;">67367433673</span></p>
+                        <p style="display: flex;"><span class="material-symbols-outlined">
+                                mail
+                            </span><span id="res-cont-mail" style="   font-weight: 500;
+                                font-size: 15px;">abc123@gmial.com</span></p>
+                        <p style="display: flex;flex-direction: row;"><span class="material-symbols-outlined">
+                                location_on
+                            </span><span id="res-cont-location" style="   font-weight: 500;
+                            font-size: 15px;">jammu and
+                                Kashmir India
+                            </span></p>
+                    </div><br>
+                    <!-- signature code -->
+                    <div class="flex-column">
+                        <p id="sign-text" style="font-size: 15px;font-weight: bold;color: rgb(15, 15, 15);">Signature</p>
+                        <div class="wrapper">
+                            <canvas id="signature-pad" width="150" height="100"></canvas>
+                        </div>
+                        <div class="clear">
+                            <button id="clear-btn">Clear</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- res body right side -->
+                <div id="res-bdy-right" style="display: flex;flex-direction: column;flex-wrap: wrap;">
+                    <!-- right-sided summary part -->
+                    <div id="res-bdy-ryt-sum">
+                        <p id="summary-tex">SUMMARY</p>
+                        <div id="res-bdy-ryt-contain">
+                            i want to be a SDE at Microsoft!
+                        </div></br>
+                    </div>
+                    <!-- right sided-body's experience part -->
+                    <div id="res-bdy-ryt-exp-field">
+                        <p id="res-bdy-right-exp-text">PROFESSIONAL EXPERIENCE</p>
+                        <div id="res-bdy-rt-exp-contain">
+                            <div id="fetched-jobtitle-date" style="display: flex;justify-content: space-between;">
+                                <li id="fetched-job-title">sde</li>
+                                <div id="fetched-start-end-date-exp">
+                                    <span id="start-date-exp">03-03-2023</span>
+                                    <span id="end-date-exp">3-01-2023</span>
+                                </div>
+                            </div>
+                            <li id="employer-fetched">Developer at Geekster</li>
+                            <p id="employer-desc">Web Developer</p>
+                        </div>
+                    </div><br>
+                    <!-- right sided body's project part -->
+                    <div id="res-bdy-ryt-proj-field">
+                        <p id="res-bdy-right-proj-text">PROJECT</p>
+                        <div id="res-bdy-rt-proj-contain">
+                            <div id="fetched-project-date" style="display: flex;justify-content: space-between;">
+                                <li id="fetched-proj-title">Resume Generator</li>
+                                <div id="fetched-start-end-date-proj">
+                                    <span id="start-date-proj">13-11-2023</span>
+                                    <span id="end-date-proj">16-11-2023</span>
+                                </div>
+                            </div><br>
+                            <p id="res-proj-desc">I have created dynamic resume generator applied js!</p>
+                        </div>
+                    </div><br>
+                    <!-- right sided body's education part -->
+                    <div id="res-bdy-ryt-edu-field">
+                        <p id="res-bdy-right-edu-text">EDUCATION</p>
+                        <div id="res-bdy-rt-edu-contain">
+                            <div id="fetched-jobtitle-date" style="display: flex;justify-content: space-between;">
+                                <li id="fetched-qualif-title">Btech</li>
+                                <div id="fetched-start-end-date-exp">
+                                    <span id="start-date-edu">05-09-2018</span>
+                                    <span id="end-date-edu">30-12-2022</span>
+                                </div>
+                            </div>
+                            <li id="colleg-fetched">University Of Kashmir</li>
+                            <p id="fetched-edu-desc">I have done my btech in Enc at Ku!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.5/signature_pad.min.js" integrity="sha512-kw/nRM/BMR2XGArXnOoxKOO5VBHLdITAW00aG8qK4zBzcLVZ4nzg7/oYCaoiwc8U9zrnsO9UHqpyljJ8+iqYiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./resume.js"></script>
+</body>
+
+</html>
