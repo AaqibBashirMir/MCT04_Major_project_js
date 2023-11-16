@@ -5,7 +5,8 @@
 }
 
 body {
-    background-image: linear-gradient(to right, rgb(20, 111, 111), rgb(194, 194, 161), rgb(20, 111, 111));
+    background-image: linear-gradient(to right, rgb(20, 111, 111), rgb(194, 194, 161));
+
 }
 
 header {
@@ -47,7 +48,7 @@ main .container {
 }
 
 .board-card {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.927);
     padding: 10px;
     border-radius: 5px;
     display: flex;
@@ -96,6 +97,7 @@ main .container {
     box-shadow: 0 12px 12px rgb(0 0 0/9%), 0 6px 6px rgb(0 0 0/6%);
     cursor: pointer;
     width: 100%;
+    background-color: #eae4e4;
 }
 
 .board-add-card {
@@ -119,7 +121,9 @@ main .container {
     display: flex;
     justify-content: space-between;
 }
-
+.card-top{
+    height: 20px;
+}
 .card-top-labels {
     flex: 3 1;
     display: flex;
@@ -224,74 +228,17 @@ card-edit {
 .delete-btn{
     box-shadow: 0 54px 55px rgba(0,0,0,.25), 0 -12px 30px rgba(0,0,0,.12), 0 4px 6px rgba(0,0,0,.12), 0 12px 13px rgba(0,0,0,.17), 0 -3px 5px rgba(0,0,0,.09);
     cursor: default;
-    position:absolute;
+    /* position:absolute; */
     z-index: 1;
     background-color: #fff;
     color: #00000095;
     border: none;
     padding: 5px;
     border-radius: 5px;
+    display:none;
 }
 .container{
+    /* overflow-x: scroll; */
     display: flex;
     flex-direction: row;
-}
-
-/* board on pop up */
-.main{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    min-height: 100vh;
-    width: 100%;
-    background-color: rgba(0,0,0,.46);
-    z-index: 20;
-    display: flex;
-    justify-content: center;
-    display: none;
-}
-
-.container_1{
-    height: 80vh;
-    width: 30%;
-    border: 2px solid rgba(0, 0, 0, 0.48);
-    margin: 30px;
-    border-radius:5px ;
-    padding: 30px;
-    background-color: white;
-}
-
-ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-li {
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-}
-.task,#title,.label,.desc{
-    padding: 10px;
-    background-color: antiquewhite;
-    width: 80px;
-    text-align: center;
-    border-radius: 5px;
-}
-
-.custom-title,.custom-desc,.custon-date,.custon-label{
-    height: 80px;
-    margin-bottom: 10px;
-}
-.custon-label{
-    margin-bottom: 80px;
-}
-#date_board{
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
-  background-color: antiquewhite;
-  font-size: large;
 }
