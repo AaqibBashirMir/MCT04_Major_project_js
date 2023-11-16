@@ -15,6 +15,54 @@
         <h1>Trello Board</h1>
     </header>
     <main>
+        <div class="main">
+            <div class="fixed_cont">
+                <div class="container_1">
+                    <div class="custom-title">
+                        <h2><span class="material-symbols-outlined">
+                                title
+                            </span> Title</h2>
+                        <p id="title" contenteditable="true"></p>
+                    </div>
+                    <div class="custom-desc">
+                        <h2><span class="material-symbols-outlined">
+                                list
+                            </span> Description</h2>
+                        <p class="desc" contenteditable="true"></p>
+                    </div>
+                    <div class="custon-date">
+                        <h2><span class="material-symbols-outlined">
+                                calendar_month
+                            </span> Date</h2>
+                        <input type="date" id="date_board">
+                    </div>
+                    <div class="custon-label">
+                        <h2> <span class="material-symbols-outlined">
+                                sell
+                            </span> Labels</h2>
+                        <ul>
+                            <li class="li-active" style="background-color: rgb(168, 25, 61);"></li>
+                            <li class="" style="background-color: rgb(79, 204, 37);"></li>
+                            <li class="" style="background-color: rgb(30, 191, 250);"></li>
+                            <li class="" style="background-color: rgb(141, 163, 119);"></li>
+                            <li class="" style="background-color: rgb(153, 117, 189);"></li>
+                            <li class="" style="background-color: rgb(207, 97, 161);"></li>
+                            <li class="" style="background-color: rgb(36, 9, 89);"></li>
+                        </ul>
+
+                        <div class="label" contenteditable="true">Add Labels</div>
+                    </div>
+
+                    <div class="tasks">
+                        <h2><span class="material-symbols-outlined">
+                                select_check_box
+                            </span> Tasks</h2>
+                        <span class="line"></span>
+                    </div>
+                    <div class="task">Add a Task</div>
+                </div>
+            </div>
+        </div>
         <div class="container">
             <div class="board">
                 <div class="board-in">
@@ -24,8 +72,8 @@
                             <button class="delete-btn board_delete_btn">Delete Board</button>
                         </div>
                     </div>
-                    <div class="board-card">
-                        <div class="card" draggable="true">
+                    <div class="board-card" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div class="card" draggable="true" ondragstart="drag(event)" id="card1">
                             <div class="card-top">
                                 <div class="card-top-labels"><label
                                         style="background-color: rgb(207, 97, 161);">Urgent</label>
@@ -59,8 +107,8 @@
                             <button class="delete-btn board_delete_btn">Delete Board</button>
                         </div>
                     </div>
-                    <div class="board-card">
-                        <div class="card" draggable="true">
+                    <div class="board-card" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div class="card" draggable="true" ondragstart="drag(event)" id="card2">
                             <div class="card-top">
                                 <div class="card-top-labels"><label
                                         style="background-color: rgb(30, 191, 250); ">Frontend</label>
@@ -94,8 +142,8 @@
                             <button class="delete-btn board_delete_btn">Delete Board</button>
                         </div>
                     </div>
-                    <div class="board-card">
-                        <div class="card" draggable="true">
+                    <div class="board-card" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div class="card" draggable="true" ondragstart="drag(event)" id="card3">
                             <div class="card-top">
                                 <div class="card-top-labels"><label style="background-color: rgb(153, 117, 189);">DB
                                         Testing</label>
@@ -129,8 +177,8 @@
                             <button class="delete-btn board_delete_btn">Delete Board</button>
                         </div>
                     </div>
-                    <div class="board-card">
-                        <div class="card" draggable="true">
+                    <div class="board-card" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div class="card" draggable="true" ondragstart="drag(event)" id="card4">
                             <div class="card-top">
                                 <div class="card-top-labels"><label
                                         style="background-color: rgb(141, 163, 119);">Prototype</label>
@@ -164,8 +212,8 @@
                             <button class="delete-btn board_delete_btn">Delete Board</button>
                         </div>
                     </div>
-                    <div class="board-card">
-                        <div class="card" draggable="true">
+                    <div class="board-card" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div class="card" draggable="true" ondragstart="drag(event)" id="card5">
                             <div class="card-top">
                                 <div class="card-top-labels"><label
                                         style="background-color: rgb(79, 204, 37); color: rgb(255, 255, 255);">APIs</label>
@@ -191,10 +239,11 @@
                     </div>
                 </div>
             </div>
-            <div class="board">
-                <div class="add_board">
+            <div class="board add_board">
+                <div class="board-card">
                     <p>Add Board</p>
                 </div>
+
             </div>
         </div>
     </main>
