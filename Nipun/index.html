@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flipkart</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- linkcss -->
+
+    <link rel="stylesheet" href="" />
+    <!-- Foricons Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/2f6fbafda9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <div class="logocontainer">
+        <div class="logo">
+          <img src="./assets/images/logo.png" alt="logo" />
+        </div>
+        <div class="explore">
+          <a class="explore_plus">Explore <span>Plus</span></a>
+          <img src="./assets/images/Plus_icon.png" alt="" />
+        </div>
+      </div>
+      <!-- search_container -->
+      <div class="search_container">
+        <form id="search_form">
+          <input
+            type="text"
+            placeholder="Seacrh for product, brands and more"
+            id="search_input"
+          />
+        </form>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <!-- recent search -->
+        <div class="recent_search">
+          <!-- <div class="recent_list">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <p>slipper</p>
+            </div> -->
+            
+          </div>
+        </div>
+      </div>
+      <!-- loginbtn -->
+      <div class="btncontainer">
+        <a href="#">Login</a>
+        <div class="login_menu">
+            <div class="login_menu_list">
+                <div class="login_menu_top">
+                    <p>New Customer?</p>
+                    <a href="">Sign Up</a>
+                </div>
+                <div class="menu_nav_link">
+                    <a href="https://www.flipkart.com/account/login?ret=%2Faccount%2F%3Frd%3D0%26link%3Dhome_account">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <p>My Profile</p>
+                    </a>
+                    <a href="https://www.flipkart.com/plus">
+                        <i class="fa-solid fa-plus"></i>
+                        <p>Flipkart Plus Zone</p>
+                    </a>
+                    <a href="https://www.flipkart.com/account/login?ret=%2Faccount%2Forders%3Flink%3Dhome_orders">
+                        <i class="fa-solid fa-border-all"></i>
+                        <p>Orders</p>
+                    </a>
+                    <a href="https://www.flipkart.com/account/login?ret=%2Fwishlist%3Flink%3Dhome_wishlist">
+                        <i class="fa-solid fa-heart"></i>
+                        <p>Wishlist</p>
+                    </a>
+                    <a href="https://www.flipkart.com/account/login?ret=%2Faccount%2Frewards%3Flink%3Dhome_rewards">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>Rewards</p>
+                    </a>
+                    <a href="https://www.flipkart.com/the-gift-card-store?link=home_giftcard">
+                        <i class="fa-solid fa-gift"></i>
+                        <p>Giftcards</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+      </div>
+      <a
+        href="https://seller.flipkart.com/sell-online?utm_source=fkwebsite&utm_medium=websitedirect"
+        class="seller"
+        >Become a Seller</a
+      >
+      <!-- more -->
+      <div class="more">
+        More
+        <i class="fa-solid fa-angle-down"></i>
+      </div>
+      <!-- cart -->
+      <div class="cart_link">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <a
+          href="https://www.flipkart.com/viewcart?exploreMode=true&preference=FLIPKART"
+          >Cart</a
+        >
+      </div>
+
+    </header>
+    <nav>
+        <ul class="navList">
+            <li>Electronics</li>
+            <li>TVs & Appliances</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>Baby & Kids</li>
+            <li>Home & Furniture</li>
+            <li>Books,Sports and More</li>
+            <li>Flights</li>
+            <li>Offer Zone</li>
+        </ul>
+    </nav>
+    <div class="main">
+        <div class="aside">
+            <div class="data_card">
+                <img src="https://rukminim2.flixcart.com/fk-p-flap/100/100/image/7df6817a0fd9c93e.png?q=50" alt="">
+                <!-- <div class="details_of_datacard"> -->
+                    <!-- <p>Data Card</p>
+                    <p>Sale is live from Rs 1,899</p> -->
+                <!-- </div> -->
+                
+            </div>
+            <div class="data_card_details">
+                <p>Data Card</p>
+                    <p>Sale is live from Rs 1,899</p>
+            </div>
+            <div class="filter">
+               <a href=""> Fliters</a>
+            </div>
+            <div class="categories">
+                <p>CATEGORIES
+                   
+                </p>
+                <a href="">  Computers</a>
+                <a href="">  Laptop Accessories</a>
+                <a href="" style =color:black ,>USB Gadgets</a>
+                
+            </div>
+            <div class="price">
+                <p>price</p>
+                <input type="range" name="" id="rangeOfPrize" min="250" max="60000">
+                
+            </div>
+            <div class="btn_of_range">
+                <select>Min 250</select>
+                <p>to</p>
+                <select>Max 60000+</select>
+            </div>
+            <p id="discount">Discount</p>
+            <div class="assured">
+                
+                <input type="checkbox" name="" id="assured_checkbox"><img src="./assets/images/fa_62673a.png" alt="assured image">
+            </div>
+            <div class="delivery">
+                <input type="checkbox" name="" id="delivery_in_1day"><span>
+                    Delivery in 1 Day
+                </span>
+
+            </div>
+            <p id="offers">Offers</p>
+            <div class="emi">
+                <div class="no_cost_emi">
+                    <input type="checkbox" name="" id="no_emi">
+                    <span>No Cost Emi</span>
+                </div>
+                <div class="special">
+                    <input type="checkbox" name="" id="special_offer">
+                    <span>Special Price</span>
+                </div>
+
+            </div>
+            <p id="brand">Brand</p>
+            <div class="rating_product">
+                <p>Customer Rating</p>
+                <div class="rating4">
+                    <input type="checkbox" name="rating" class="rating_checkbox" id="rating4star">
+                    <span class="star">4★ & above</span>
+                </div>
+                
+
+                <div class="rating3">
+                    <input type="checkbox" name="" class="rating_checkbox" id="rating3star">
+                    <span class="star">3★ & above</span>
+                </div>
+
+                <div class="rating2">
+                    <input type="checkbox" name="" class="rating_checkbox" id="rating2star">
+                    <span class="star">2★ & above</span>
+                </div>
+
+                <div class="rating1">
+                    <input type="checkbox" name="" class="rating_checkbox" id="rating1star">
+                    <span class="star">1★ & above</span>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="main_section">
+            <div class="main_deatils">
+                <ul>
+                    <li>Home></li>
+                    <li>Computers></li>
+                    <li>Laptop Acess...></li>
+                    <li>UCB Gadgets></li>
+                </ul>
+                <a href=" https://www.flipkart.com/laptop-accessories/pr?sid=6bo,ai3"class="lap_access">Laptop Accessories</a>
+                <p class ="usb">USB Gadget <span class="productnumber">(Showing 1 - 40 products of 40 products)</span></p>
+                <ul class="sortby">
+                    <a><li>Sort By</li></a>
+                    <a id="popularity"><li>Popularity</li></a>
+                   <a id="lowTohigh"><li>Price -- Low to High
+                    </li></a>
+                    <a id="highTolow"><li>Price -- High to Low</li></a>
+                    <a href=""><li>Newest First</li></a>
+                </ul>
+
+            </div>
+            <div class="outer_product_container">
+            <!-- <div class="product_container">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/usb-gadget/v/9/j/usb-to-4-usb-a-ports-bestor-original-imaghz6ufc255zwk.jpeg?q=70" alt="">
+                <p>Bestor USB Hub Multiport Adapter for MacBook Pro Air M1...</p>
+                <div class="rating">
+                    <span class="rating_star">4<i class="fa-solid fa-star"></i></span>
+                    <span>(5015)</span>
+                    
+                   
+
+                </div>
+                <div class="assured">
+                    <img src="./assets/images/fa_62673a.png" alt="" class="assured_img">
+                </div>
+                
+               <div class="prize">
+                <span>&#8377 </span><span>357</span>
+                <span class="original_prize">&#8377 1,999</span>
+                
+               </div>
+               <div class="off">
+                <span>82% off</span>
+               </div>
+              
+                -->
+               
+            </div>
+        </div>
+
+        </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

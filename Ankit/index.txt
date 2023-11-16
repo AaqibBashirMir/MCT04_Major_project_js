@@ -1,1 +1,10 @@
-ankit
+Client id:
+AZQa68pxzDjT7DqiYFSc_EcZEaJYz1ZCK2ikbnzKTOndUE0KBTL4cR8enBPZLpjwHguOSIP9PTdBLVbR
+
+Secret id:
+EKqo6AFJH-pDS23HLfi3WpWAFmYzs7yJQf661jenkYNOl76UDWLV8VO8YQig47BHFLcQG3bRNtASFt2D
+
+
+ID:  sb-fxsyo26168037@business.example.com
+
+Pass: Gn4xY-G%
