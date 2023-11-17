@@ -1,7 +1,9 @@
 
 HOSTED LINK:
 
+UI LINK:
 
+https://aaqibbashirmir.github.io/MCT04_TEAM02/ANKIT_PAYMENTintegration/public/
 
 UI:
 <img width="1424" alt="Screenshot 2023-11-17 at 11 07 01 PM" src="https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/42855900/5784e123-fe43-431e-9c0b-692dcf946863">
