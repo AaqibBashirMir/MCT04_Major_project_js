@@ -14,6 +14,8 @@ goToyourDashboard.addEventListener('click',(event)=>{
     in_data.classList.add('email');
     in_data.setAttribute('type','email');
     in_data.setAttribute('placeholder','Enter email address');
+    in_data.setAttribute("pattern","[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$");
+    in_data.required=true;
     a.appendChild(button);
     div.appendChild(in_data);
     div.appendChild(a);

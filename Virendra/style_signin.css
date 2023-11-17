@@ -125,9 +125,10 @@ button{
 .build_board,.btn{
     box-shadow: 5px 5px 4px rgba(27, 27, 110, 0.803);
 }
-.build_board:hover{
+.build_board:hover ,.cont_btns a button:hover{
     transition: .5s;
     background-color: rgba(94, 29, 97, 0.533);
+    cursor: pointer;
 }
 .email{
     padding: 10px;
@@ -140,4 +141,25 @@ button{
     display: flex;
     flex-direction: row;
     gap: 20px;
+}
+
+
+@media only screen and (max-width: 780px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    
+    }
+    .upper{
+        padding-top:0px;
+        margin-bottom: 0px;
+        padding-left: -100px;
+    }
+    .upper img{
+        max-height: 200%;
+        max-width: 100%;
+        transform: scale(0.5);
+    }
 }
