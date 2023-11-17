@@ -1,46 +1,47 @@
 
 // ---Add board button
-let addBoard = document.querySelector('.add_board');
-addBoard.addEventListener('click', () => {
-    createForm();
-});
-
-// ----craete board input field ------
-let container_main = document.querySelector('.container');
-function createForm() {
-    let div_board = document.createElement('div');
-    div_board.classList.add('board');
-    let div = document.createElement('div');
-    div.classList.add('add_board');
-    let form = document.createElement('div');
-    form.classList.add('custom-input');
-    div.innerHTML = `<input type="text" class="custom-input-value" id="boardName" placeholder="Enter Board Name">
-    <div class="custom-input-foot">
-     <button class="add_btn"type="submit">Add</button>
-     <p class="close">X</p>
-     </div>`;
-    addBoard.remove();
-    div.appendChild(form);
-    div_board.appendChild(div);
-    container_main.appendChild(div_board);
-
-    // --init element of delete and add buttons
-    addBoardNameBtn();
-    boardName();
-    deleteBoard();
-    deleteCard();
+addBoardBtn();
+function addBoardBtn(){
+    let addBoard = document.querySelector('.add_board');
+    addBoard.addEventListener('click',createForm);
+    
+    // ----craete board input field ------
+    let container_main = document.querySelector('.container');
+    function createForm() {
+        let div_board = document.createElement('div');
+        div_board.classList.add('board');
+        let div = document.createElement('div');
+        div.classList.add('add_board');
+        let form = document.createElement('div');
+        form.classList.add('custom-input');
+        div.innerHTML = `<input type="text" class="custom-input-value" id="boardName" placeholder="Enter Board Name">
+        <div class="custom-input-foot">
+         <button class="add_btn"type="submit">Add</button>
+         <p class="close">X</p>
+         </div>`;
+        addBoard.remove();
+        div.appendChild(form);
+        div_board.appendChild(div);
+        container_main.appendChild(div_board);
+    
+        // --init element of delete and add buttons
+        addBoardNameBtn();
+        boardName();
+        deleteBoard();
+        deleteCard();
+        closeForm();
+    }
 }
+
 
 function addBoardNameBtn() {
     let add_btns = document.querySelectorAll('.add_btn');
     add_btns.forEach((ele, idx) => {
-        console.log(ele, idx);
         add_btns[idx].addEventListener('click', submitForm)
     });
 
     function submitForm() {
         setTimeout(createNewBoard(), 2000);
-        console.log("create board called");
         addingForm();
         deleteBoard();
         deleteCard();
@@ -61,12 +62,11 @@ function createNewBoard() {
     let div = document.createElement('div');
     let div1 = document.createElement('div');
     div.classList.add('board-head');
-    div.innerHTML = `<p class="board-card-title">${enteredBoardName} <span class="count">${countCard}</span></p>
+    div.innerHTML = `<p class="board-card-title">${enteredBoardName} <span class="count">0</span></p>
                               <div class="board-more-btn">...
                               <button class="delete-btn board_delete_btn">Delete Board</button>
                               </div>     
                               `;
-
     addBoard_ele.parentElement.remove();
     div1.classList.add('custom-input');
     div1.innerHTML = `<div class="board-add-card">+ Add Card</div>
@@ -75,8 +75,8 @@ function createNewBoard() {
     boardin.appendChild(div1);
     board.appendChild(boardin);
     container.appendChild(board);
-    console.log("board created");
     closeForm();
+    addBoard_button();
 };
 
 //-----------------------Adding cards------------------------
@@ -97,9 +97,12 @@ function addCard_btn() {
 function createNewCard(ele) {
     let div = document.createElement('div');
     div.classList.add('board-card');
+    div.setAttribute("ondrop","drop(event)");
+    div.setAttribute("ondragover","allowDrop(event)");
+
     div.innerHTML =
         `
-    <div class="card" draggable="true">
+    <div class="card" draggable="true" ondragstart="drag(event)" id="card_${getRandomID(10,100)}" >
     <div class="card-top">
         <div class="card-top-labels" ><label style="background-color: rgb(207, 97, 161);"></label>
         </div>
@@ -128,11 +131,11 @@ function createNewCard(ele) {
     } else {
         ele.appendChild(div);
     }
-
     addingForm();
     more_icon();
     deleteCard();
     closeForm();
+    updateNoOfCards();
 };
 
 
@@ -147,7 +150,6 @@ function boardName() {
     inText.forEach((ele, idx) => {
         ele.addEventListener('keyup', debounce(function () {
             enteredBoardName = ele.value;
-            console.log(ele.value);
         }, 1000));
     });
 }
@@ -158,7 +160,6 @@ function cardName() {
     inText.forEach((ele, idx) => {
         ele.addEventListener('keyup', debounce(function () {
             enteredCardName = ele.value;
-            console.log(ele.value);
         }, 1000));
     });
 }
@@ -175,10 +176,6 @@ const debounce = (func, delay) => {
 
 // on clk on Add
 let add_btns = document.querySelectorAll('.add_btn');
-// console.log(add_btns);
-
-
-
 
 // ==>
 // add car
@@ -206,6 +203,7 @@ function adding(e) {
     closeForm();
     deleteBoard();
     deleteCard();
+    delete_iconClick();
 }
 
 function closeForm() {
@@ -221,25 +219,27 @@ function closeForm() {
 
 
 
-// delete board
-let delete_boards_menu = document.querySelectorAll('.board-more-btn');
-
-delete_boards_menu.forEach((delete_btn) => {
-    delete_btn.addEventListener('click', (event) => {
-        event.stopPropagation();
-        delete_btn.children[0].style.display = 'block';
-        deleteBoard();
-        let boards = document.querySelectorAll('.board');
-        boards.forEach((board) => {
-            board.addEventListener('click', (event) => {
-                event.stopPropagation();
-                delete_btn.children[0].style.display = 'none';
+// delete btn on click Board Showing delete btn
+function delete_iconClick(){
+    let delete_boards_menu = document.querySelectorAll('.board-more-btn');
+    delete_boards_menu.forEach((delete_btn) => {
+        delete_btn.addEventListener('click', (event) => {
+            event.stopPropagation();
+            delete_btn.children[0].style.display = 'block';
+            deleteBoard();
+            let boards = document.querySelectorAll('.board');
+            boards.forEach((board) => {
+                board.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    delete_btn.children[0].style.display = 'none';
+                });
             });
-        });
-    })
-
-
-});
+        })
+    
+    
+    });
+}
+delete_iconClick();
 
 
 function deleteBoard() {
@@ -267,7 +267,6 @@ function deleteCard() {
         deleteCard_btns[idx].addEventListener('click', (event) => {
             event.stopPropagation();
 
-            //    console.log( deleteCard_btns[idx].parentElement.parentElement.parentElement.innerHTML);;
             deleteCard_btns[idx].parentElement.parentElement.parentElement.remove();
         })
     })
@@ -308,7 +307,7 @@ let date = document.querySelector('#date_board');
 let label = document.querySelector('.label');
 let task=document.querySelector('.task');
 
-console.log(title,task,desc,date,label);
+// card update
 card_fixed_display();
 let main = document.querySelector('.main');
 
@@ -324,16 +323,16 @@ function dd(event){
     if(event.target.classList=='card'){
         main.style.display = "block";
         //label
-        console.log(event.target.children[0].innerText);
+        // console.log(event.target.children[0]);
         title.innerText=event.target.children[0].innerText;
         //title
-        console.log(event.target.children[1].innerText);
+        // console.log(event.target.children[1].backgroundColor);
         label.innerText= event.target.children[1].innerText;
         //date
-        console.log(event.target.children[2].innerText);
+        // console.log(event.target.children[2]);
         date.value=event.target.children[2].innerText;
         //desc
-        console.log(event.target.children[3].innerText);
+        // console.log(event.target.children[3]);
         task.innerText=event.target.children[3].innerText;
 
     }
@@ -341,11 +340,14 @@ function dd(event){
 }
 
 main.addEventListener('click', (event) => {
-        event.stopPropagation();
+    console.log(event.target.classList);
+    if(event.target.classList.contains('fixed_cont')){
         main.style.display = "none";
+    }
+       
 });
 
-// drag and drop
+// -------------------drag and drop-----------------
 function allowDrop(ev) {
     ev.stopPropagation();
     ev.preventDefault();
@@ -357,12 +359,48 @@ function drag(ev) {
 }
 
 function drop(ev) {
-   console.log(ev.target.classList);
    if(ev.target.classList.contains("board-card")){
     ev.stopPropagation();
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
+    updateNoOfCards();
    }
    
 }
+
+//------------ Add New Board --------------------
+
+function addBoard_button() {
+    let container =document.querySelector('.container');
+let div_board= document.createElement("div");
+div_board.classList.add("board");
+div_board.classList.add("add_board");
+div_board.innerHTML=`<div class="add_board_btn">
+                       <p>Add Board</p>`;
+container.appendChild(div_board);
+addBoardBtn();
+closeForm();
+card_fixed_display();   
+}
+// addBoard_button();
+// --------------count card and update------------------
+
+updateNoOfCards();
+function updateNoOfCards() {
+    let counts=document.querySelectorAll('.count');
+   let board_cards=document.querySelectorAll('.board-card');
+   board_cards.forEach((board, idx)=>{
+    counts[idx].innerText=board.children.length-1;
+     console.log(board.children.length-1);
+   })
+}
+
+
+// ------------Random Methods-------------------------------
+
+function getRandomID(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+  }
+
+  //---------------------- coun 
