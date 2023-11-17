@@ -24,6 +24,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 ## Usses
 Normaly IT-Softweree industries is one of the largest econamical and fast growing conpanies.this applications is use for manage task in the Agile Methdology
+Right now Almost all the companies fellow the agile methodologis
 
 1. **Clone the Repository:**
    ```bash
