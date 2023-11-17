@@ -17,6 +17,7 @@ body{
     border-radius: 10px;
     padding: 60px;
     margin-bottom: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 .main-div input{
     border: none;
@@ -50,7 +51,8 @@ body{
     display: flex;
     align-items: center;
     background-color: white;
-    border: 2px solid #0D6EFD;
+    border: 1px solid lightgray;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     height: 40px;
     margin-top: 10px;
 }
@@ -58,7 +60,7 @@ body{
     width: 85%;
     height: 75%;
     border: none;
-    padding: 5px;
+    padding-left: 8px;
     outline: none;
 }
 .cont span{
@@ -280,6 +282,7 @@ th, td {
 .total{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .totalList{
     display: flex;
@@ -297,4 +300,40 @@ th, td {
     border: none;
     outline: none;
     text-align: center;
+}
+#calculate{
+    width: 150px;
+    height: 40px;
+    background-color: #0D6EFD;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Media Query */
+@media (max-width:950px) {
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-div{
+        width: 100vw;
+    }
+    .ReviewInvoice{
+        width: 100%;
+    }
+    .item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .items{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 68vw;
+        gap: 1rem;
+    }
 }
