@@ -1,9 +1,7 @@
 
 <img src="https://play-lh.googleusercontent.com/CiGs15N1e1tXrSnVLEY9jOnKi1oNzPQNRjqhR8fXE0pnu_bRyNmfc8xXr2VQUJTfJ9A" alt="Logo" width="100" height="100">
 
-# Trello.com
-<p>created by --virendra</p>
-# Trello Board || Agile Board
+# Trello || Agile Board
 
 ## Overview
 
@@ -33,6 +31,9 @@ Make sure you have the following software installed on your machine:
 - HTML
 - CSS
 - JS
+
+  
+![images](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/126088849/b8030e1c-5e40-4e63-993b-5d8f945f16c3)
 
 ## Usage
 - Click on "+ Add Board" to create a new board.
