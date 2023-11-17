@@ -9,6 +9,9 @@ https://aaqibbashirmir.github.io/MCT04_TEAM02/Pratibha/index.html
 
 ![3](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/129493126/8520e306-6d57-4672-9bb7-9ead0575049b)
 
+<h1>Detail Explanation of Project :</h1>
+
+
 
 
 
