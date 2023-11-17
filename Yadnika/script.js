@@ -37,7 +37,7 @@ AddFields.addEventListener("click",()=>{
         </div>
         <div class="input">
                 <input type="number" min="1" value="1" id="qty" class="qty">
-                <input type="text" class="currency" value=${curreny.value} readonly>
+                <input type="text" class="currency" value='${curreny.value} 'readonly>
                 <input type="number" step="0.01" min="1.00" class="rate" value="1.00" id="rate">
                 <button onclick="handleButtonClick(${itemCount},'hr${itemCount}')"><i class="fa-solid fa-trash-can"></i></button>
         </div>
@@ -90,7 +90,8 @@ function updateTotal(){
             CalculateActual();
         })
         selectCurr.addEventListener('change',()=>{
-            curreny.value = selectCurr.value
+            const Currency = item.querySelector('.currency')
+            Currency.value = selectCurr.value
             discount.textContent = curreny.value + `${dis.value}` + "(%)";
             stotal.textContent = curreny.value + "1.00"
             total.textContent = curreny.value + "1"
