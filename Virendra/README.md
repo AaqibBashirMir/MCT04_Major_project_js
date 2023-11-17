@@ -19,12 +19,12 @@ some where i was used a localstorage and all DOM Manupulation.
 - **CSS:** Provides styling for a visually appealing presentation.
 - **JavaScript:** Adds interactivity and dynamic behavior.
 
-## Getting Started
-Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+ ## Getting Started
+ Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-## Usses
-Normaly IT-Softweree industries is one of the largest econamical and fast growing conpanies.this applications is use for manage task in the Agile Methdology
-Right now Almost all the companies fellow the agile methodologis
+ ## Usses
+ Normaly IT-Softweree industries is one of the largest econamical and fast growing conpanies.this applications is use for manage task in the Agile Methdology
+ Right now Almost all the companies fellow the agile methodologis
 
 1. **Clone the Repository:**
    ```bash
