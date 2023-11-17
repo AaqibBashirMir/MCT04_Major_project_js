@@ -5,10 +5,24 @@ date.innerHTML = `<span>Current Date:</span> ${currentDate.toLocaleDateString()}
 
 const AddFields = document.getElementById('AddFields');
 
+const curreny = document.querySelector('.currency');
+let dis = document.getElementById('disPer');
+const stotal = document.getElementById('subtotal');
+const total = document.getElementById('total');
+let selectCurr = document.getElementById('optionsCurr');
+
+selectCurr.addEventListener('change',()=>{
+    curreny.value = selectCurr.value
+    discount.textContent = curreny.value + `${dis.value}` + "(%)";
+    stotal.textContent = curreny.value + "1.00"
+    total.textContent = curreny.value + "1"
+})
+
 //----------- Add Items----------
-let itemCount = 2;
+let itemCount = 1;
 
 AddFields.addEventListener("click",()=>{
+    itemCount++;
     const ItemCont = document.querySelector('.itemCont');
     const Items = document.createElement("div");
     const hr = document.createElement('hr')
@@ -18,48 +32,40 @@ AddFields.addEventListener("click",()=>{
     Items.id = itemCount;
     Items.innerHTML = `
         <div class="data">
-                <input type="text" class="Iname" placeholder="Item name">
-                <input type="text" class="desc" placeholder="Item description">
+                <input type="text" class="Iname" placeholder="Item name" required>
+                <input type="text" class="desc" placeholder="Item description" required>
         </div>
         <div class="input">
                 <input type="number" min="1" value="1" id="qty" class="qty">
-                <input type="text" id="currency" value="$" readonly>
+                <input type="text" class="currency" value=${curreny.value} readonly>
                 <input type="number" step="0.01" min="1.00" class="rate" value="1.00" id="rate">
                 <button onclick="handleButtonClick(${itemCount},'hr${itemCount}')"><i class="fa-solid fa-trash-can"></i></button>
         </div>
     `
     ItemCont.appendChild(Items);
     ItemCont.appendChild(hr)
-    itemCount++;
     updateTotal()
 })
 
 // ------Remove Items---------
 
 function handleButtonClick(itemId,hrId){
-    const RemoveItem = document.getElementById(itemId);
-    const hrRemove = document.getElementById(hrId);
+        const RemoveItem = document.getElementById(itemId);
+        const hrRemove = document.getElementById(hrId);
 
-    RemoveItem.parentNode.removeChild(RemoveItem)
-    hrRemove.parentNode.removeChild(hrRemove)
-    updateTotal()
+        RemoveItem.parentNode.removeChild(RemoveItem)
+        hrRemove.parentNode.removeChild(hrRemove)
+        updateTotal()
+        CalculateActual();
+    
 }
 
 //------Calulation Section-----
-const curreny = document.getElementById('currency');
-let dis = document.getElementById('disPer');
-const stotal = document.getElementById('subtotal');
-const total = document.getElementById('total');
-let selectCurr = document.getElementById('optionsCurr');
-
-selectCurr.addEventListener('change',()=>{
-    curreny.value = selectCurr.value
-})
 
 stotal.textContent = curreny.value + "1.00"
 total.textContent = curreny.value + "1"
 const discount = document.getElementById('discount')
-discount.textContent = curreny.value + `${dis.value}`;
+discount.textContent = curreny.value + `${dis.value}` + "(%)";
 
 stotal.addEventListener('input',()=>{
     updateTotal()
@@ -71,69 +77,61 @@ dis.addEventListener('input',()=>{
 function updateTotal(){
     const Items = document.querySelectorAll('.items')
     Items.forEach(item=>{
-        let rate = item.querySelector('input:nth-child(3)')
+        dis.addEventListener('input',()=>{
+            discount.textContent = curreny.value + `${dis.value}` + "(%)";
+            CalculateActual();
+        })
+        let rate = item.querySelector('.rate')
+        rate.addEventListener('input',()=>{
+            CalculateActual();
+        })
         let quantity = item.querySelector('.qty')
-
+        quantity.addEventListener('input',()=>{
+            CalculateActual();
+        })
         selectCurr.addEventListener('change',()=>{
             curreny.value = selectCurr.value
-            // updateTotal()
-        })
-
-        dis.addEventListener('input',()=>{
-            // const stotal = document.getElementById('subtotal');
-            // const total = document.getElementById('total');
-            // const discount = document.getElementById('discount')
-            let Quantity = parseFloat(`${quantity.value}`)
-            let rates = parseFloat(`${rate.value}`)
-            let subtotal = rates * Quantity
-            stotal.textContent = curreny.value + `${subtotal.toFixed(2)}`
-            discount.textContent = curreny.value + `${dis.value}`;
-            let Alltotal = parseFloat(subtotal - (subtotal * (dis.value/100)))
-            total.textContent = curreny.value + `${Alltotal.toFixed(2)}`
-        })
-
-        rate.addEventListener('input',()=>{
-            // const stotal = document.getElementById('subtotal');
-            // const total = document.getElementById('total');
-            // const discount = document.getElementById('discount')
-            let Quantity = parseFloat(`${quantity.value}`)
-            let rates = parseFloat(`${rate.value}`)
-            let subtotal = rates * Quantity
-            stotal.textContent = curreny.value + `${subtotal.toFixed(2)}`
-            discount.textContent = curreny.value + `${dis.value}`;
-            let Alltotal = parseFloat(subtotal - (subtotal * (dis.value/100)))
-            total.textContent = curreny.value + `${Alltotal.toFixed(2)}`
-        })
-
-        quantity.addEventListener('input',()=>{
-            // const stotal = document.getElementById('subtotal');
-            // const total = document.getElementById('total');
-            // const discount = document.getElementById('discount')
-            let Quantity = parseFloat(`${quantity.value}`)
-            let rates = parseFloat(`${rate.value}`)
-            let subtotal = rates * Quantity
-            stotal.textContent = curreny.value + `${subtotal.toFixed(2)}`
-            discount.textContent = curreny.value + `${dis.value}`;
-            let Alltotal = parseFloat(subtotal - (subtotal * (dis.value/100)))
-            total.textContent = curreny.value + `${Alltotal.toFixed(2)}`
+            discount.textContent = curreny.value + `${dis.value}` + "(%)";
+            stotal.textContent = curreny.value + "1.00"
+            total.textContent = curreny.value + "1"
         })
     })
+    
 }
+//-----Calculate Button-------------
+// const calculate = document.getElementById('calculate')
+// calculate.addEventListener('click',()=>{
+//     CalculateActual();
+// })
 
+
+function CalculateActual(){
+    let actualTotal = 0;
+    const Items = document.querySelectorAll('.items')
+    Items.forEach(item=>{
+        let rate = item.querySelector('input:nth-child(3)')
+        let quantity = item.querySelector('.qty')
+        let total = parseFloat(rate.value * quantity.value);
+        actualTotal += total
+    })
+    console.log(actualTotal)
+    stotal.textContent = curreny.value + `${actualTotal.toFixed(2)}`
+    let Totalwithdis = parseFloat(actualTotal - (actualTotal * (dis.value/100)))
+    total.textContent = curreny.value + `${Totalwithdis.toFixed(2)}`
+}
 // -----Review Invoice-----
 
 function ReviewInvoice(){
-    var container = document.querySelector(".mainContainer")
-    var inputs = container.querySelectorAll('input[required]');
+    let container = document.querySelector(".mainContainer")
+    let inputs = container.querySelectorAll('input[required]');
 
-    for(var i=0;i<inputs.length;i++){
+    for(let i=0;i<inputs.length;i++){
         if(!inputs[i].value){
             alert("Please fill in all required fields")
             return;
-        }else{
-            CreateModal()
         }
     }
+    CreateModal()
 }
 
 //--Modal--
@@ -158,6 +156,7 @@ function CreateModal(){
 
     const duedate = document.getElementById('dueD');
     let table = document.createElement('table')
+    table.classList = "InvoiceTable"
     const Tid = document.getElementById('total')
 
     main.innerHTML = `
@@ -166,7 +165,7 @@ function CreateModal(){
                 <h1>${name.value}</h1>
                 <h4>Invoice #: ${Invoice.value}</h4>
             </div>
-            <h3>Amount Due: ${Tid.textContent}</h3>
+            <h3 class="AmountDue"></h3>
         </div>
 
         <div class="Billdata">
@@ -201,9 +200,8 @@ function CreateModal(){
     h3.innerHTML = "<b>PRICE</b>";
     h4.innerHTML = "<b>AMOUNT</b>"
 
-    Items.forEach(item=>{
-        createTable(item,table)
-    })
+    for(let i = 0;i < Items.length;i++)
+        createTable(Items[i],table)
     
     Download.style.backgroundColor = 'white';
     Download.style.border = '1px solid #0D6EFD'
@@ -213,33 +211,25 @@ function CreateModal(){
     Download.style.height = '40px'
     sendInv.style.height = '40px'
 
-    const TotalD = document.createElement('div');
-    TotalD.classList = 'TotalB'
+    const TotalDiv = document.createElement('div');
+    TotalDiv.classList = "TotalB"
 
-    // let amountD = amt();
-    // console.log(amountD)
-
-    TotalD.innerHTML = `
-        <div></div>
-        <div class=spanList>
-            <div><span class="SubT">SUBTOTAL:</span> <span>${stotal.textContent}</span></div>
-            <div><span class="DiscD">DISCOUNT:</span> <span>${discount.textContent}</span></div>
-            <div><span class="Stotal">TOTAL:</span> <span>${Tid.textContent}</span></div>
-        </div>
-        `
-    main.appendChild(TotalD)
-}
-
-let newAmt = 0;
-function amt(){
-    const Items = document.querySelectorAll('.items')
-    for(let i = 0; i<Items.length; i++){
-        let Q = Items[i].querySelector('.qty')
-        let R = Items[i].querySelector('.rate')
-        const amt = parseInt(Q.value * R.value)
-        newAmt = parseInt(newAmt + amt);
-        return newAmt;
+    TotalDiv.innerHTML = `
+            <div></div>
+            <div class=spanList>
+                <div><span class="SubT">SUBTOTAL:</span> <span class="subto"></span></div>
+                <div><span class="DiscD">DISCOUNT:</span> <span class="DiscOnIn"></span></div>
+                <div><span class="Stotal">TOTAL:</span> <span class="tot"></span></div>
+            </div>
+    `
+    main.appendChild(TotalDiv)
+    const notes = document.getElementById('note');
+    if(notes.value !== ''){
+        const notesDiv = document.createElement('notes')
+        notesDiv.textContent = `${notes.value}`;
+        main.appendChild(notesDiv)
     }
+    updateTable();
 }
 
 function createTable(item,table){
@@ -267,6 +257,42 @@ Download.addEventListener("click",()=>{
         margin: 8,
         filename: 'Invoice.pdf',
     };
-
     html2pdf().from(main).set(options).save();
 })
+// ---------Update total in Invoice page-------------
+function updateTable(){
+    const table = document.querySelector(".InvoiceTable")
+    let totalAmount = 0;
+    let rows = table.rows
+    for(let i = 1 ;i < rows.length ;i++){
+        let Q = parseFloat(rows[i].cells[3].textContent)
+        totalAmount += Q
+    }
+
+    const subtotal = document.querySelector('.subto');
+    const total = document.querySelector('.tot');
+    const AmountDue = document.querySelector('.AmountDue')
+    const DiscD = document.querySelector('.DiscOnIn')
+
+    let ActualTotal = parseFloat(totalAmount - (totalAmount * (dis.value/100)))
+    AmountDue.textContent = "Amount Due: "+ curreny.value + `${ActualTotal}`
+    subtotal.textContent = curreny.value + `${totalAmount.toFixed(2)}`
+    total.textContent = curreny.value + `${ActualTotal}`
+    DiscD.textContent = curreny.value + `${dis.value}` + "(%)";
+}
+//--Send Invoice---
+const sendInvoice = document.getElementById('sendInv');
+
+sendInvoice.addEventListener('click',()=>{
+    let Data = document.querySelector('.Main').innerText;
+
+    // let message = "Check out this Invoice Details: " + encodeURIComponent(content); 
+    // let whatsappURL = "https://api.whatsapp.com/send?text=" + message;
+    // window.open(whatsappURL, '_blank');
+
+    let subject = "Invoice Details";
+    let body = "Hi,\n\nSharing Invoice Details with you:\n\n" + Data;
+    let mailtoURL = "mailto:" + encodeURIComponent(email.value)  + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    window.location.href = mailtoURL;
+})
+
