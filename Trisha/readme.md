@@ -54,30 +54,17 @@ The JSON represents a browser extension ("demo Bookmarks") for saving YouTube ti
 ✔ JSON
 
 <h2> Summary </h2>
-
-In summary, this code sets up the basic structure for a Minesweeper game, including the game title, mine count display, game board, rules section, difficulty level buttons, and a restart button. The actual functionality and interactivity of the game are likely implemented using JavaScript.
+The provided code is a Chrome extension designed for managing bookmarks on YouTube videos. It imports the getActiveTabURL function and defines functions for handling UI, including adding, viewing, playing, and deleting bookmarks. The extension initializes on the document load event, fetching and displaying bookmarks for the current YouTube video. Notably, the code focuses on providing a streamlined bookmarking experience within the YouTube environment.
 
 <h2> UI </h2>
-<h4> Main Page UI:- </h4>
 
-![image](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/126088849/9aebda1a-4dad-453b-bb6a-3d9c91b0a834)
+![image](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/126088849/52131cdd-7e1a-4df4-9cf4-162c2766741a)
 
-<h4> Beginner Level:- </h4>
+![image](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/126088849/ea5f75d1-f948-4cad-be6c-f6b642d9795a)
 
-![image](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/126088849/7cbdc8a5-28d4-48f0-b418-874914dc2f7c)
+![image](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/126088849/07dd1628-2eec-496e-b150-6ba30846f96e)
 
-<h4> Intermidiate Level:- </h4>
+![image](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/126088849/db3dfa28-1f91-46c2-9b38-b0cf9148cd89)
 
-![image](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/126088849/417b8961-aa44-4c8d-bff4-513577ca9b62)
 
-<h4> Expert Level:- </h4>
 
-![image](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/126088849/0baa2398-6eea-40c7-9386-399ee75022c2)
-
-<h4> Checking Mines:- </h4>
-
-![image](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/126088849/6a687479-9323-44f3-8225-2d2a4c8a55d2)
-
-<h4> If mines found:- </h4>
-
-![image](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/126088849/a97b7f14-6e01-4a10-9922-b27a2671451d)
