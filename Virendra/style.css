@@ -295,7 +295,7 @@ card-edit {
 }
 /* fixed board */
 .container_1 {
-    height: 80vh;
+    height: 70vh;
     width: 30%;
     border: 2px solid rgba(0, 0, 0, 0.48);
     margin: 30px;
@@ -395,6 +395,7 @@ ul {
     justify-content: center;
     height: 100%;
     width: 100%;
+    align-items: center;
 }
 
 #boardName {
