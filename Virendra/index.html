@@ -2,254 +2,49 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" href="./assets/logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trello Board ||Agile board</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Create your first Workspace | Trello</title>
+    <link rel="stylesheet" href="./style_signin.css">
 </head>
 
 <body>
     <header>
-        <!-- <h1>Trello Board</h1> -->
         <img src="https://trello.com/assets/c8b7bafdbc02d4015366.svg" alt="trello">
     </header>
     <main>
-        <div class="main">
-            <div class="fixed_cont">
-                <div class="container_1">
-                    <div class="custom-title">
-                        <h2><span class="material-symbols-outlined">
-                                title
-                            </span> Title</h2>
-                        <p id="title" contenteditable="true"></p>
-                    </div>
-                    <div class="custom-desc">
-                        <h2><span class="material-symbols-outlined">
-                                list
-                            </span> Description</h2>
-                        <p class="desc" contenteditable="true"></p>
-                    </div>
-                    <div class="custon-date">
-                        <h2><span class="material-symbols-outlined">
-                                calendar_month
-                            </span> Date</h2>
-                        <input type="date" id="date_board">
-                    </div>
-                    <div class="custon-label">
-                        <h2> <span class="material-symbols-outlined">
-                                sell
-                            </span> Labels</h2>
-                        <ul>
-                            <li class="li-active" style="background-color: rgb(168, 25, 61);"></li>
-                            <li class="" style="background-color: rgb(79, 204, 37);"></li>
-                            <li class="" style="background-color: rgb(30, 191, 250);"></li>
-                            <li class="" style="background-color: rgb(141, 163, 119);"></li>
-                            <li class="" style="background-color: rgb(153, 117, 189);"></li>
-                            <li class="" style="background-color: rgb(207, 97, 161);"></li>
-                            <li class="" style="background-color: rgb(36, 9, 89);"></li>
-                        </ul>
-
-                        <div class="label" contenteditable="true">Add Labels</div>
-                    </div>
-
-                    <div class="tasks">
-                        <h2><span class="material-symbols-outlined">
-                                select_check_box
-                            </span> Tasks</h2>
-                        <span class="line"></span>
-                    </div>
-                    <div class="task">Add a Task</div>
-                </div>
-            </div>
-        </div>
         <div class="container">
-            <div class="board">
-                <div class="board-in">
-                    <div class="board-head">
-                        <p class="board-card-title">Backlog <span class="count"></span></p>
-                        <div class="board-more-btn">...
-                            <button class="delete-btn board_delete_btn">Delete Board</button>
-                        </div>
+            <div class="left">
+                <div class="leftFormContent">
+                    <h1>Welcome to Trello!</h1>
+                    <p>We're glad you made it. Let's start organizing your projects so you can get things done.</p>
+                    <button class="build_board">Go to your
+                        board</button>
                     </div>
-                    <div class="board-card" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <div class="card" draggable="true" ondragstart="drag(event)" id="card1">
-                            <div class="card-top">
-                                <div class="card-top-labels"><label
-                                        style="background-color: rgb(207, 97, 161);">Urgent</label>
-                                </div>
-                                <div class="card-top-more">...
-                                    <button class="delete-btn card_delete_btn">Delete Card</button>
-                                </div>
-                            </div>
-                            <div class="card-title">Task1</div>
-                            <div>
-                                <p title="Task1 Detail Description"><span class="material-symbols-outlined">
-                                        format_list_bulleted
-                                    </span></p>
-                            </div>
-                            <div class="card-footer">
-                                <p class="card-footer-item">5 May</p>
-                                <p class="card-footer-item">0</p>
-                            </div>
-                        </div>
-                        <div class="custom-input">
-                            <div class="board-add-card">+ Add Card</div>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <div class="board">
-                <div class="board-in">
-                    <div class="board-head">
-                        <p class="board-card-title">Ready For Dev <span class="count"></span></p>
-                        <div class="board-more-btn">...
-                            <button class="delete-btn board_delete_btn">Delete Board</button>
-                        </div>
-                    </div>
-                    <div class="board-card" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <div class="card" draggable="true" ondragstart="drag(event)" id="card2">
-                            <div class="card-top">
-                                <div class="card-top-labels"><label
-                                        style="background-color: rgb(30, 191, 250); ">Frontend</label>
-                                </div>
-                                <div class="card-top-more">...
-                                    <button class="delete-btn card_delete_btn">Delete Card</button>
-                                </div>
-                            </div>
-                            <div class="card-title">Task1</div>
-                            <div>
-                                <p title="Task1 Detail Description"><span class="material-symbols-outlined">
-                                        format_list_bulleted
-                                    </span></p>
-                            </div>
-                            <div class="card-footer">
-                                <p class="card-footer-item">5 May</p>
-                                <p class="card-footer-item">0</p>
-                            </div>
-                        </div>
-                        <div class="custom-input">
-                            <div class="board-add-card">+ Add Card</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="board">
-                <div class="board-in">
-                    <div class="board-head">
-                        <p class="board-card-title">In Progress <span class="count"></span></p>
-                        <div class="board-more-btn">...
-                            <button class="delete-btn board_delete_btn">Delete Board</button>
-                        </div>
-                    </div>
-                    <div class="board-card" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <div class="card" draggable="true" ondragstart="drag(event)" id="card3">
-                            <div class="card-top">
-                                <div class="card-top-labels"><label style="background-color: rgb(153, 117, 189);">DB
-                                        Testing</label>
-                                </div>
-                                <div class="card-top-more">...
-                                    <button class="delete-btn card_delete_btn">Delete Card</button>
-                                </div>
-                            </div>
-                            <div class="card-title">Task1</div>
-                            <div>
-                                <p title="Task1 Detail Description"><span class="material-symbols-outlined">
-                                        format_list_bulleted
-                                    </span></p>
-                            </div>
-                            <div class="card-footer">
-                                <p class="card-footer-item">5 May</p>
-                                <p class="card-footer-item">0</p>
-                            </div>
-                        </div>
-                        <div class="custom-input">
-                            <div class="board-add-card">+ Add Card</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="board">
-                <div class="board-in">
-                    <div class="board-head">
-                        <p class="board-card-title">In Testing <span class="count"></span></p>
-                        <div class="board-more-btn">...
-                            <button class="delete-btn board_delete_btn">Delete Board</button>
-                        </div>
-                    </div>
-                    <div class="board-card" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <div class="card" draggable="true" ondragstart="drag(event)" id="card4">
-                            <div class="card-top">
-                                <div class="card-top-labels"><label
-                                        style="background-color: rgb(141, 163, 119);">Prototype</label>
-                                </div>
-                                <div class="card-top-more">...
-                                    <button class="delete-btn card_delete_btn">Delete Card</button>
-                                </div>
-                            </div>
-                            <div class="card-title">Task1</div>
-                            <div>
-                                <p title="Task1 Detail Description"><span class="material-symbols-outlined">
-                                        format_list_bulleted
-                                    </span></p>
-                            </div>
-                            <div class="card-footer">
-                                <p class="card-footer-item">5 May</p>
-                                <p class="card-footer-item">0</p>
-                            </div>
-                        </div>
-                        <div class="custom-input">
-                            <div class="board-add-card">+ Add Card</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="board">
-                <div class="board-in">
-                    <div class="board-head">
-                        <p class="board-card-title">Deployed <span class="count"></span></p>
-                        <div class="board-more-btn">...
-                            <button class="delete-btn board_delete_btn">Delete Board</button>
-                        </div>
-                    </div>
-                    <div class="board-card" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <div class="card" draggable="true" ondragstart="drag(event)" id="card5">
-                            <div class="card-top">
-                                <div class="card-top-labels"><label
-                                        style="background-color: rgb(79, 204, 37); color: rgb(255, 255, 255);">APIs</label>
-                                </div>
-                                <div class="card-top-more">...
-                                    <button class="delete-btn card_delete_btn">Delete Card</button>
-                                </div>
-                            </div>
-                            <div class="card-title">Task1</div>
-                            <div>
-                                <p title="Task1 Detail Description"><span class="material-symbols-outlined">
-                                        format_list_bulleted
-                                    </span></p>
-                            </div>
-                            <div class="card-footer">
-                                <p class="card-footer-item">5 May</p>
-                                <p class="card-footer-item">0</p>
-                            </div>
-                        </div>
-                        <div class="custom-input">
-                            <div class="board-add-card">+ Add Card</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="board add_board">
-                <div class="add_board_btn ">
-                    <p>Add Board</p>
-                </div>
 
+            <div class="right">
+                <div class="lower">
+                    <svg viewBox="0 0 594 463"  xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="grad2" x1="50%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color: rgb(252, 198, 235); stop-opacity: 1;"></stop>
+                                <stop offset="100%" style="stop-color: rgb(192, 182, 242); stop-opacity: 1;"></stop>
+                            </linearGradient>
+                        </defs>
+                        <path fill="url(#grad2)"
+                            d="M532 160.739C556 217 630.697 274.586 571 337.586C511.303 400.586 436 408 352 452C268 496 197.915 390.469 151 326C115.876 277.735 0 221.034 0 160.739C0 75.7133 92.1323 7.13798 151 0.739296C197 -4.26072 235.975 17.7392 292 17.7392C371.224 17.7392 418.042 -11.3217 465 32C506 69.8251 508 104.479 532 160.739Z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="upper">
+                    <img alt="Welcome to Trello!" src="https://trello.com/assets/a7fb768ffd0181cbfc63.svg">
+                </div>
             </div>
         </div>
     </main>
-    <script src="./index.js"></script>
-
+    <script src="./welcome.js"></script>
 </body>
 
 </html>

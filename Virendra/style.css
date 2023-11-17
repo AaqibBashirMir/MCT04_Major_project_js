@@ -21,6 +21,12 @@ header {
     padding: 12px 0 12px 12px;
     /* position: fixed;
     z-index: 4; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+
 }
 
 header img {
@@ -29,7 +35,16 @@ header img {
     margin-left: 30px;
 
 }
-
+header .add_board_btn{
+    height: 20px;
+    width: 120px;
+    font-weight: bolder;
+    font-size: larger;
+    text-shadow: 5px 5px 5px black;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
 /* Board Container */
 main .container {
     display: flex;
@@ -289,6 +304,8 @@ card-edit {
     background-color: white;
     /* display: none; */
     overflow: scroll;
+    padding: 10px 0px 10px 30px ;
+
 }
 
 ul {
@@ -303,7 +320,7 @@ li {
     border-radius: 50%;
 }
 
-.task,
+
 #title,
 .label,
 .desc {
@@ -313,13 +330,34 @@ li {
     text-align: center;
     border-radius: 5px;
 }
-
+.task{
+    padding: 10px;
+    /* height: 50px; */
+    background-color: rgb(99, 71, 33);
+    width: 100px;
+    margin-top: 5px;
+    border-radius: 5px;
+    margin: 10px;
+    
+}
+.date_container{
+    margin-top: 5px;
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+    gap: 10px;
+    font-weight: bold;
+}
 .custom-title,
 .custom-desc,
 .custon-date,
 .custon-label {
     height: 80px;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
 }
 
 .custon-label {

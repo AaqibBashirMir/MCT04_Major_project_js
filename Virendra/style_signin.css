@@ -113,13 +113,31 @@ button{
     box-shadow: none;
     border: none;
     background-color: #ffffff;
-
 }
 
-.leftFormContent button{
+.leftFormContent button,.btn{
     padding: 10px;
     background-color: var(--logoBgClr);
     font-weight: bold;
     color: var(--color);
     border-radius: 5px;
+}
+.build_board,.btn{
+    box-shadow: 5px 5px 4px rgba(27, 27, 110, 0.803);
+}
+.build_board:hover{
+    transition: .5s;
+    background-color: rgba(94, 29, 97, 0.533);
+}
+.email{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: aliceblue;
+    font-weight: bold;
+}
+.cont_btns{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }

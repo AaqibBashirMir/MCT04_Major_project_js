@@ -1,10 +1,10 @@
 
 // ---Add board button
 addBoardBtn();
-function addBoardBtn(){
+function addBoardBtn() {
     let addBoard = document.querySelector('.add_board');
-    addBoard.addEventListener('click',createForm);
-    
+    addBoard.addEventListener('click', createForm);
+
     // ----craete board input field ------
     let container_main = document.querySelector('.container');
     function createForm() {
@@ -23,7 +23,7 @@ function addBoardBtn(){
         div.appendChild(form);
         div_board.appendChild(div);
         container_main.appendChild(div_board);
-    
+
         // --init element of delete and add buttons
         addBoardNameBtn();
         boardName();
@@ -97,12 +97,12 @@ function addCard_btn() {
 function createNewCard(ele) {
     let div = document.createElement('div');
     div.classList.add('board-card');
-    div.setAttribute("ondrop","drop(event)");
-    div.setAttribute("ondragover","allowDrop(event)");
+    div.setAttribute("ondrop", "drop(event)");
+    div.setAttribute("ondragover", "allowDrop(event)");
 
     div.innerHTML =
         `
-    <div class="card" draggable="true" ondragstart="drag(event)" id="card_${getRandomID(10,100)}" >
+    <div class="card" draggable="true" ondragstart="drag(event)" id="card_${getRandomID(10, 100)}" >
     <div class="card-top">
         <div class="card-top-labels" ><label style="background-color: rgb(207, 97, 161);"></label>
         </div>
@@ -220,7 +220,7 @@ function closeForm() {
 
 
 // delete btn on click Board Showing delete btn
-function delete_iconClick(){
+function delete_iconClick() {
     let delete_boards_menu = document.querySelectorAll('.board-more-btn');
     delete_boards_menu.forEach((delete_btn) => {
         delete_btn.addEventListener('click', (event) => {
@@ -235,8 +235,8 @@ function delete_iconClick(){
                 });
             });
         })
-    
-    
+
+
     });
 }
 delete_iconClick();
@@ -305,7 +305,8 @@ let title = document.querySelector('#title');
 let desc = document.querySelector('.desc');
 let date = document.querySelector('#date_board');
 let label = document.querySelector('.label');
-let task=document.querySelector('.task');
+let date_update = document.querySelector('.date');
+let task = document.querySelector('.task');
 
 // card update
 card_fixed_display();
@@ -314,38 +315,63 @@ let main = document.querySelector('.main');
 function card_fixed_display() {
     let cards = document.querySelectorAll('.card');
     cards.forEach((card) => {
-        card.addEventListener('click', dd);
+        card.addEventListener('click', onCardClick);
 
     })
 }
 
-function dd(event){
-    if(event.target.classList=='card'){
+function onCardClick(event) {
+    if (event.target.classList == 'card') {
         main.style.display = "block";
         //label
-        // console.log(event.target.children[0]);
-        title.innerText=event.target.children[0].innerText;
+        title.innerText = event.target.children[0].innerText;
+        title.style.backgroundColor = event.target.children[0].children[0].children[0].style.backgroundColor;
         //title
-        // console.log(event.target.children[1].backgroundColor);
-        label.innerText= event.target.children[1].innerText;
+        label.innerText = event.target.children[1].innerText;
         //date
-        // console.log(event.target.children[2]);
-        date.value=event.target.children[2].innerText;
+        date.value = event.target.children[2].innerText;
         //desc
-        // console.log(event.target.children[3]);
-        task.innerText=event.target.children[3].innerText;
-
+        date_update.innerText = event.target.children[3].children[0].innerText;
     }
-   
+
 }
 
 main.addEventListener('click', (event) => {
-    console.log(event.target.classList);
-    if(event.target.classList.contains('fixed_cont')){
+    let title = document.querySelector('#title');
+    let desc = document.querySelector('.desc');
+    let date = document.querySelector('#date_board');
+    let label = document.querySelector('.label');
+    let date_update = document.querySelector('.date');
+    let task = document.querySelector('.task');
+
+    event.stopPropagation();
+    if (event.target.classList.contains('fixed_cont')) {
         main.style.display = "none";
+
+        localStorage.setItem(title, );
     }
-       
+
 });
+
+// update clolor labels
+function updateLabelColor() {
+    let colorLabels = document.querySelectorAll('li');
+    colorLabels.forEach((label, idx) => {
+        label.addEventListener('click', (eve) => {
+            eve.stopPropagation();
+            title.style.backgroundColor = colorLabels[idx].style.backgroundColor;
+
+            if (colorLabels[idx].style.boxShadow == 'none' && colorLabels[idx].style.border == 'none') {
+                colorLabels[idx].style.boxShadow = '5px 5px 5px #567876';
+                colorLabels[idx].style.border = '2px solid #000000';
+            }
+
+            // console.log( colorLabels[idx].style.boxShadow, colorLabels[idx].style.border);   
+        });
+
+    })
+}
+updateLabelColor();
 
 // -------------------drag and drop-----------------
 function allowDrop(ev) {
@@ -359,41 +385,40 @@ function drag(ev) {
 }
 
 function drop(ev) {
-   if(ev.target.classList.contains("board-card")){
-    ev.stopPropagation();
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-    updateNoOfCards();
-   }
-   
+    if (ev.target.classList.contains("board-card")) {
+        ev.stopPropagation();
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+        updateNoOfCards();
+    }
+
 }
 
 //------------ Add New Board --------------------
 
 function addBoard_button() {
-    let container =document.querySelector('.container');
-let div_board= document.createElement("div");
-div_board.classList.add("board");
-div_board.classList.add("add_board");
-div_board.innerHTML=`<div class="add_board_btn">
+    let container = document.querySelector('.container');
+    let div_board = document.createElement("div");
+    div_board.classList.add("board");
+    div_board.classList.add("add_board");
+    div_board.innerHTML = `<div class="add_board_btn">
                        <p>Add Board</p>`;
-container.appendChild(div_board);
-addBoardBtn();
-closeForm();
-card_fixed_display();   
+    container.appendChild(div_board);
+    addBoardBtn();
+    closeForm();
+    card_fixed_display();
 }
 // addBoard_button();
 // --------------count card and update------------------
 
 updateNoOfCards();
 function updateNoOfCards() {
-    let counts=document.querySelectorAll('.count');
-   let board_cards=document.querySelectorAll('.board-card');
-   board_cards.forEach((board, idx)=>{
-    counts[idx].innerText=board.children.length-1;
-     console.log(board.children.length-1);
-   })
+    let counts = document.querySelectorAll('.count');
+    let board_cards = document.querySelectorAll('.board-card');
+    board_cards.forEach((board, idx) => {
+        counts[idx].innerText = board.children.length - 1;
+    })
 }
 
 
@@ -401,6 +426,5 @@ function updateNoOfCards() {
 
 function getRandomID(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
-  }
+}
 
-  //---------------------- coun 
