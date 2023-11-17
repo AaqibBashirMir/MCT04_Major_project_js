@@ -102,7 +102,7 @@ function createNewCard(ele) {
 
     div.innerHTML =
         `
-    <div class="card" draggable="true" ondragstart="drag(event)" id="card_${getRandomID(10, 100)}" >
+    <div class="card" draggable="true" ondragstart="drag(event)" id="card_${getRandomID(100, 999)}" >
     <div class="card-top">
         <div class="card-top-labels" ><label style="background-color: rgb(207, 97, 161);"></label>
         </div>
@@ -136,6 +136,7 @@ function createNewCard(ele) {
     deleteCard();
     closeForm();
     updateNoOfCards();
+    popupDashboardDataUpdate();
 };
 
 
@@ -266,7 +267,6 @@ function deleteCard() {
     deleteCard_btns.forEach((ele, idx) => {
         deleteCard_btns[idx].addEventListener('click', (event) => {
             event.stopPropagation();
-
             deleteCard_btns[idx].parentElement.parentElement.parentElement.remove();
         })
     })
@@ -285,7 +285,6 @@ function more_icon() {
     more_label.forEach((btn, idx) => {
         btn.addEventListener('mouseenter', () => {
             more[idx].style.display = 'block';
-
         });
         btn.addEventListener('mouseleave', () => {
             more[idx].style.display = 'none';
@@ -319,38 +318,55 @@ function card_fixed_display() {
 
     })
 }
-
+let card_id;
 function onCardClick(event) {
     if (event.target.classList == 'card') {
         main.style.display = "block";
+        card_id = event.target.id;
+        console.log(event.target.id);
         //label
         title.innerText = event.target.children[0].innerText;
         title.style.backgroundColor = event.target.children[0].children[0].children[0].style.backgroundColor;
         //title
         label.innerText = event.target.children[1].innerText;
         //date
-        date.value = event.target.children[2].innerText;
+        date.value = event.target.children[2].value;
         //desc
         date_update.innerText = event.target.children[3].children[0].innerText;
     }
-
 }
 
-main.addEventListener('click', (event) => {
+function popupDashboardDataUpdate() {
     let title = document.querySelector('#title');
     let desc = document.querySelector('.desc');
     let date = document.querySelector('#date_board');
     let label = document.querySelector('.label');
     let date_update = document.querySelector('.date');
     let task = document.querySelector('.task');
+    localStorage.setItem("card_id", card_id);
+    localStorage.setItem(card_id + "_title", title.innerText);
+    localStorage.setItem(card_id + "_desc", desc.innerText);
+    localStorage.setItem(card_id + "_date", date.value);
+    localStorage.setItem(card_id + "_label", label.innerText);
+    localStorage.setItem(card_id + "_bgcolor", title.style.backgroundColor);
+
+    let id = localStorage.getItem("card_id");
+    let card = document.querySelector('#' + id);
+    card.children[0].children[0].children[0].innerText = localStorage.getItem(id + "_title");
+    card.children[0].children[0].children[0].style.backgroundColor = localStorage.getItem(id + "_bgcolor");
+    card.children[1].innerText = localStorage.getItem(id + "_card");
+    card.children[2].innerText = localStorage.getItem(id + "_desc");
+    card.children[3].innerText = localStorage.getItem(id + "_date");
+
+    localStorage.clear();
+}
+main.addEventListener('click', (event) => {
 
     event.stopPropagation();
     if (event.target.classList.contains('fixed_cont')) {
         main.style.display = "none";
-
-        localStorage.setItem(title, );
+        popupDashboardDataUpdate();
     }
-
 });
 
 // update clolor labels

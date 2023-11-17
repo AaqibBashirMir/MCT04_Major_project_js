@@ -6,11 +6,11 @@
 
 body {
     /* background-image: linear-gradient(to top, rgb(127, 120, 154), #33448f, rgb(83, 75, 108)); */
-    background-image: url('./assets/bg_image.jpg');
+    background-image: url('./assets/hannah-busing-Zyx1bK9mqmA-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    backdrop-filter: blur(px);
+    backdrop-filter: blur(3px);
     /* filter: brightness(50%); */
 }
 
