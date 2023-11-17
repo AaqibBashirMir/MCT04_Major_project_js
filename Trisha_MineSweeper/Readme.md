@@ -76,7 +76,3 @@ In summary, this code sets up the basic structure for a Minesweeper game, includ
 <h4> If mines found:- </h4>
 
 ![image](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/126088849/a97b7f14-6e01-4a10-9922-b27a2671451d)
-
-
-![pngtree-thank-you-text-decorated-by-floral-ornaments-png-image_6136789](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/126088849/0a823970-26e6-450e-be1e-cd0b7f92a8b0)
-
