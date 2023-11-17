@@ -23,7 +23,7 @@ some where i was used a localstorage and all DOM Manupulation.
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
 ## Usses
-Normaly IT-Softweree industries is one of the largest econamical and fast growing conpanies.this applications is use for manage task in the model
+Normaly IT-Softweree industries is one of the largest econamical and fast growing conpanies.this applications is use for manage task in the Agile model
 
 1. **Clone the Repository:**
    ```bash
