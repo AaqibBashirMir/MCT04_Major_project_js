@@ -41,12 +41,17 @@ The code is a Chrome extension content script that enhances YouTube video pages 
 The code defines a concise asynchronous function, getActiveTabURL, using the chrome.tabs API in a Chrome extension. It queries and returns the URL of the active tab in the current window.
 
 <h4> popup.js (to activate the current window) </h4>
+The code is part of a Chrome extension for managing bookmarks on YouTube videos. Key features include adding, viewing, playing, and deleting bookmarks. It imports the getActiveTabURL function, defines functions for UI manipulation, and includes event handlers for play and delete actions. The document load event listener initializes the extension by fetching and displaying bookmarks for the current YouTube video.
 
+<h4> ✍ JSON:- </h4>
+The JSON represents a browser extension ("demo Bookmarks") for saving YouTube timestamps. It has permissions for storage and tabs, injects scripts into YouTube pages, and follows Manifest Version 3.
 
 <h2> Technology Used </h2>
 
-
-![images](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/126088849/b8030e1c-5e40-4e63-993b-5d8f945f16c3)
+✔ HTML
+✔ CSS
+✔ Jvascript
+✔ JSON
 
 <h2> Summary </h2>
 
