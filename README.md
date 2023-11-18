@@ -6,13 +6,14 @@ https://aaqibbashirmir.github.io/MCT04_TEAM02/
 This is the readme of the whole project with project names, and  the collabrators and there hosted links:<br>
 1.Project 1:-Resume Generator.<br>
 1.Project 2:-Payment Integration.<br>
-1.Project 1:-Flipkart Sorting and filtering.<br>
-1.Project 1:-Typing Game.<br>
-1.Project 1:-Chrome Extension<br>
-1.Project 1:-Mine Sweeper.<br>
-1.Project 1:-Trello Cards.<br>
-1.Project 1:-Invoice Generator.<br>
-1.Project 1:-Code Editor.<br>
+1.Project 3:-Flipkart Sorting and filtering.<br>
+1.Project 4:-Typing Game.<br>
+1.Project 5:-Chrome Extension<br>
+1.Project 6:-Mine Sweeper.<br>
+1.Project 7:-Trello Cards.<br>
+1.Project 8:-Invoice Generator.<br>
+1.Project9:-Code Editor.<br>
+https://www.google.com/imgres?imgurl=https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1200%2F1*2xsLeLNqKwIoGOQlw8O6Ug.png&tbnid=sR5ZR39MUxDFBM&vet=12ahUKEwiatbbe0M2CAxXhcmwGHftPBj8QMygFegQIARBw..i&imgrefurl=https%3A%2F%2Fakhilsonthi.medium.com%2Fhow-do-html-css-javascript-fit-together-9d225412246f&docid=de3NA0lw9zwHoM&w=1200&h=747&q=html%20js%20css&ved=2ahUKEwiatbbe0M2CAxXhcmwGHftPBj8QMygFegQIARBw
 
 
 <h3>Collabrators:-</h3>
