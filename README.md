@@ -1,6 +1,6 @@
 # MCT04_Major_project_js
 #team-2
-<h3>Hosted Link:-</h3>
+<h1>Hosted Link:-</h1>
 https://aaqibbashirmir.github.io/MCT04_TEAM02/
 
 # flipkart made by nipun 
