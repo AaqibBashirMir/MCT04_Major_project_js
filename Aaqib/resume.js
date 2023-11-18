@@ -1,32 +1,49 @@
 
 // template type changer all js here
 let resumeType = document.querySelector("#type");
-let resField = document.querySelector("#resume-field");
+let resField = document.querySelector("#resume-field").style.display="none"
 let resHeaderCont = document.querySelector("#res-header-cont").style.display = "none"
+let resumeBdyLeft = document.querySelector("#res-bdy-left").style.display = "none";
+
+
+
 resumeType.addEventListener("input", (e) => {
-    let resHeader = document.querySelector("#res-header").style.backgroundColor = "#1c305c"
 
     if (resumeType.value == "Two-Column") {
-        let inputFile=document.querySelector("#file").style.display="block"
+        let resHeader = document.querySelector("#res-header");
+        resHeader.style.width = "650px"
+        resHeader.style.marginLeft = "220px"
+        let resBodyRight = document.querySelector("#res-bdy-right").style.width = "750px"
+        let resumeHeaderContact = document.querySelector("#res-header-cont");
+        resumeHeaderContact.style.marginRight = "5px"
+        resumeHeaderContact.style.marginTop = "30px"
+        console.log(1);
+        let resField = document.querySelector("#resume-field").style.display = "block"
+        let inputFile = document.querySelector("#file").style.display = "block"
         var image = document.getElementById('output').style.display = "block"
-        resField.style.display = "block"
         let resumeBdyLeft = document.querySelector("#res-bdy-left").style.display = "block";
-        let resHeader = document.querySelector("#res-header").style.backgroundColor = "bluelight"
         let resHeaderCont = document.querySelector("#res-header-cont").style.display = "none"
+        let addFile=document.querySelector("#add-file").style.display="block"
     }
     else if (resumeType.value == "Minimalist") {
+        let resField = document.querySelector("#resume-field").style.display = "block"
         console.log(1);
-        let resWidth = document.querySelector("#res-bdy-right").style.width = "650px"
-        let inputFile=document.querySelector("#file").style.display="none"
+        let resWidth = document.querySelector("#res-bdy-right").style.width = "750px"
+        let inputFile = document.querySelector("#file").style.display = "none"
         var image = document.getElementById('output').style.display = "none"
-        resField.style.display = "block"
         let resumeBdyLeft = document.querySelector("#res-bdy-left").style.display = "none";
-        let resHeader = document.querySelector("#res-header").style.backgroundColor = "lightgray"
+        let resHeader = document.querySelector("#res-header");
         let resHeaderCont = document.querySelector("#res-header-cont").style.display = "block"
+        resHeader.style.width = "800px"
+        resHeader.style.marginLeft = "0"
+        let resumeHeaderContact = document.querySelector("#res-header-cont");
+        resumeHeaderContact.style.marginRight ="100px"
+        resumeHeaderContact.style.marginTop = "30px"
+
+        let resBodyRight= document.querySelector("#res-bdy-right").style.width="850px"
+
     }
-    // else {
-    //     resField.style.display = "none"
-    // }
+
 })
 
 
@@ -34,7 +51,7 @@ resumeType.addEventListener("input", (e) => {
 // bg-color chnger
 let hedBgColor = document.querySelector("#bg-color");
 hedBgColor.addEventListener("input", (e) => {
-    let resHeader = document.querySelector("#res-header").style.backgroundColor = hedBgColor.value;
+    let resHeader = document.querySelector("#res-bdy-left").style.backgroundColor = hedBgColor.value;
 })
 // textcolorChanger
 let textColorchnger = document.querySelector("#text-col");
@@ -45,19 +62,20 @@ textColorchnger.addEventListener("input", (e) => {
 })
 
 // user input his/her own image upload js code here 
-function loadFile(event){
-    let image=document.querySelector("#output");
-    image.src=URL.createObjectURL(event.target.files[0])
+function loadFile(event) {
+    let image = document.querySelector("#output");
+    image.src = URL.createObjectURL(event.target.files[0])
 }
 
 // signature js code
-var signature=document.querySelector("#signature-pad");
-var signaturePad=new SignaturePad(signature,{
-    backgroundColor:"lightblue"});
+var signature = document.querySelector("#signature-pad");
+var signaturePad = new SignaturePad(signature, {
+    backgroundColor: "lightblue"
+});
 
-    let clearButon=document.querySelector("#clear-btn").addEventListener("click",()=>{
-        signaturePad.clear();
-    })
+let clearButon = document.querySelector("#clear-btn").addEventListener("click", () => {
+    signaturePad.clear();
+})
 
 
 
@@ -107,7 +125,17 @@ inputDEscription.addEventListener("input", summaryAppend)
 // skill fetch
 let inputSkill = document.querySelector("#job-skill");
 inputSkill.addEventListener("input", (e) => {
-    let fetchedSkill=document.querySelector("#skills").textContent=inputSkill.value;
+    let fetchedSkill = document.querySelector("#skills").textContent = inputSkill.value;
+})
+// hobbies fetch
+let inputHobby = document.querySelector("#hobbies");
+inputHobby.addEventListener("input", (e) => {
+    let fetchedSkill = document.querySelector("#fetched-hobbies").textContent = inputHobby.value;
+})
+// language fetch
+let inputLanguage = document.querySelector("#languages");
+inputLanguage.addEventListener("input", (e) => {
+    let fetchedSkill = document.querySelector("#fetched-languages").textContent = inputLanguage.value;
 })
 
 
@@ -216,12 +244,12 @@ educationBtn.addEventListener("click", (e) => {
         let fetchedEduQualif = document.querySelector("#fetched-qualif-title").textContent = inputEduQualif.value
     })
 
-        // fetching here  University/School to resume
-        let inputEduCollege = document.querySelector("#edu-sch-colleg");
-        inputEduCollege.addEventListener("input", () => {
-            console.log("111111111");
-            let fetchedCollege = document.querySelector("#colleg-fetched").textContent = inputEduCollege.value
-        })
+    // fetching here  University/School to resume
+    let inputEduCollege = document.querySelector("#edu-sch-colleg");
+    inputEduCollege.addEventListener("input", () => {
+        console.log("111111111");
+        let fetchedCollege = document.querySelector("#colleg-fetched").textContent = inputEduCollege.value
+    })
 
     // fetching here Education description to my resume.
     let inputEduDesc = document.querySelector("#edu-desc");
@@ -236,8 +264,8 @@ educationBtn.addEventListener("click", (e) => {
 let downloadBtn = document.querySelector("#download-btn");
 downloadBtn.addEventListener("click", (e) => {
     console.log("download");
-    let inputFile=document.querySelector("#file").style.display="none"
-    let clearButton=document.querySelector("#clear-btn").style.display="none";
+    let inputFile = document.querySelector("#file").style.display = "none"
+    let clearButton = document.querySelector("#clear-btn").style.display = "none";
     let bodyupper = document.querySelector("#body").style.display = "none";
     let navbar = document.querySelector("#navbar").style.display = "none"
     window.print();
