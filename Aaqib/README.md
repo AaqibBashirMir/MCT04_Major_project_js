@@ -1,5 +1,6 @@
 <h1>Readme.md</h1>
 <h3>Hosted Link:-</h3>
+https://aaqibbashirmir.github.io/MCT04_TEAM02/Aaqib/resume.html
 
 <h1>Description</h1>
 <hr style="font-weight:bolder">
@@ -58,7 +59,8 @@ User inputs for these sections are captured and dynamically updated in the resum
 There's a button (#download-btn) that, when clicked, adjusts styling and initiates the printing of the resume, presumably for downloading or printing purposes.
 Overall, your JavaScript code is responsible for creating a dynamic and interactive user experience in a web application where users can customize and generate their resumes based on different templates and input data. The code includes functionality for handling various user inputs, adjusting styles based on template choices, and managing the display of different resume sections.
 
-Thank you for your attention. Feel free to explore the HTML code further and customize it for your needs.
+Thank you for your attention. Feel free to explore the HTML code further and customize it for your needs.<br>
 
+https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210304115719/animation1111.jpg
 
 
