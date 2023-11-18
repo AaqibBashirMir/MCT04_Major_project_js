@@ -27,7 +27,7 @@ https://aaqibbashirmir.github.io/MCT04_TEAM02/Trisha
 
 <h4>6.Trisha minesweeper</h4>
 <h5>Hosted links:-</h5>
-https://aaqibbashirmir.github.io/MCT04_TEAM02/
+https://aaqibbashirmir.github.io/MCT04_TEAM02/Trisha_MineSweeper
 
 <h4>7.Pratibha</h4>
 <h5>Hosted links:-</h5>
