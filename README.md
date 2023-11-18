@@ -1,4 +1,4 @@
-# MCT04_Major_project_js<br>
+<h1 style="color:orange;"> MCT04_Major_project_js </h1><br>
 <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210304115719/animation1111.jpg" height="350px" width="1000px">
 #team-2
 <h1>Hosted Link:-</h1>
