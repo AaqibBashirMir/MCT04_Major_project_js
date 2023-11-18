@@ -91,6 +91,8 @@ main .container {
     margin: 5px;
     align-items: center;
     justify-content: center;
+    height: 250px;
+  
 }
 .add_board_btn{
     width: 90%;
@@ -130,6 +132,7 @@ main .container {
     cursor: pointer;
     width: 100%;
     background-color: rgb(215, 212, 179);
+    height: 160px;
 }
 
 .board-add-card {
