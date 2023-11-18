@@ -11,7 +11,7 @@ https://aaqibbashirmir.github.io/MCT04_TEAM02/Aaqib
 
 <h4>2.Ankit Kumar</h4>
 <h5>Hosted links:-</h5>
-https://aaqibbashirmir.github.io/MCT04_TEAM02/ANKIT_PAYMENTintegration
+https://aaqibbashirmir.github.io/MCT04_TEAM02/https://pay-app03.onrender.com/
 <h5>Repo link:-</h5>
 https://github.com/AaqibBashirMir/MCT04_TEAM02/tree/main/ANKIT_PAYMENTintegration
 
