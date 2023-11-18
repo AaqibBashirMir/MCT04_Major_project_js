@@ -14,8 +14,8 @@ This is the readme of the whole project with project names, and  the collabrator
 1.Project 8:-Invoice Generator.<br>
 1.Project9:-Code Editor.<br>
 <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1200%2F1*2xsLeLNqKwIoGOQlw8O6Ug.png&tbnid=sR5ZR39MUxDFBM&vet=12ahUKEwiatbbe0M2CAxXhcmwGHftPBj8QMygFegQIARBw..i&imgrefurl=https%3A%2F%2Fakhilsonthi.medium.com%2Fhow-do-html-css-javascript-fit-together-9d225412246f&docid=de3NA0lw9zwHoM&w=1200&h=747&q=html%20js%20css&ved=2ahUKEwiatbbe0M2CAxXhcmwGHftPBj8QMygFegQIARBw
-">
-https://www.google.com/imgres?imgurl=https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1200%2F1*2xsLeLNqKwIoGOQlw8O6Ug.png&tbnid=sR5ZR39MUxDFBM&vet=12ahUKEwiatbbe0M2CAxXhcmwGHftPBj8QMygFegQIARBw..i&imgrefurl=https%3A%2F%2Fakhilsonthi.medium.com%2Fhow-do-html-css-javascript-fit-together-9d225412246f&docid=de3NA0lw9zwHoM&w=1200&h=747&q=html%20js%20css&ved=2ahUKEwiatbbe0M2CAxXhcmwGHftPBj8QMygFegQIARBw
+"/>
+
 
 
 <h3>Collabrators:-</h3>
