@@ -7,7 +7,7 @@ This is the readme of the whole project, and below are the collabrators and ther
 <h3>Collabrators:-</h3>
 <h4>1.Aaqib Bashir Mir</h4>
 <h5>Hosted links:-</h5>
-https://aaqibbashirmir.github.io/MCT04_TEAM02/Aaqib
+https://aaqibbashirmir.github.io/MCT04_TEAM02/Aaqib/resume.html
 
 <h4>2.Ankit Kumar</h4>
 <h5>Hosted links:-</h5>
