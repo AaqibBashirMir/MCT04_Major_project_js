@@ -24,7 +24,7 @@ function addBoardBtn() {
         div_board.appendChild(div);
         container_main.appendChild(div_board);
 
-        // --init element of delete and add buttons
+        // -------------init element of delete and add buttons-------------
         addBoardNameBtn();
         boardName();
         deleteBoard();
@@ -50,7 +50,7 @@ function addBoardNameBtn() {
 }
 addBoardNameBtn();
 
-// add board
+// --------------Add board---------------------------
 let countCard = 0;
 let container = document.querySelector('.container');
 function createNewBoard() {
@@ -77,6 +77,7 @@ function createNewBoard() {
     container.appendChild(board);
     closeForm();
     addBoard_button();
+    deleteCard
 };
 
 //-----------------------Adding cards------------------------
@@ -92,7 +93,7 @@ function addCard_btn() {
     })
 }
 
-// created Card
+// ---------------Created Card---------------------
 
 function createNewCard(ele) {
     let div = document.createElement('div');
@@ -125,7 +126,7 @@ function createNewCard(ele) {
     div1.classList.add('custom-input');
     div1.innerHTML = `<div class="board-add-card">+ Add Card</div>`;
     div.appendChild(div1);
-    console.log(ele.target.innerHTML);
+    // console.log(ele.target.innerHTML);
     if (ele.classList.contains('board')) {
         ele.children[0].appendChild(div);
     } else {
@@ -141,8 +142,8 @@ function createNewCard(ele) {
 
 
 
-// ----------------create new board/card inputs updates-----------
-// this is for input fields
+// ----------------create new board/card inputs updates-----------------
+//------------------ This is for input fields ---------------------------
 
 
 let enteredBoardName;
@@ -175,11 +176,11 @@ const debounce = (func, delay) => {
     }
 }
 
-// on clk on Add
+// ---------------on clk on Add-------------------------
 let add_btns = document.querySelectorAll('.add_btn');
 
 // ==>
-// add car
+// --------------------Add Card------------------------
 
 function addingForm() {
     let addCard_btn = document.querySelectorAll(".board-add-card")
@@ -220,7 +221,7 @@ function closeForm() {
 
 
 
-// delete btn on click Board Showing delete btn
+//------------------------Delete btn on click Board Showing delete btn---------------------------------
 function delete_iconClick() {
     let delete_boards_menu = document.querySelectorAll('.board-more-btn');
     delete_boards_menu.forEach((delete_btn) => {
@@ -253,7 +254,7 @@ function deleteBoard() {
         })
     })
 }
-
+//--------------------Delete Board----------------------------------
 let delete_btns = document.querySelectorAll('.card-top-more');
 delete_btns.forEach((delete_btn) => {
     delete_btn.addEventListener('click', () => {
@@ -261,7 +262,7 @@ delete_btns.forEach((delete_btn) => {
         deleteCard();
     })
 });
-// delete cards
+
 function deleteCard() {
     let deleteCard_btns = document.querySelectorAll('.card_delete_btn');
     deleteCard_btns.forEach((ele, idx) => {
@@ -271,7 +272,7 @@ function deleteCard() {
         })
     })
 }
-// delete cards
+//----------------------------Delete cards-------------------------------
 
 
 
@@ -323,7 +324,7 @@ function onCardClick(event) {
     if (event.target.classList == 'card') {
         main.style.display = "block";
         card_id = event.target.id;
-        console.log(event.target.id);
+        // console.log(event.target.id);
         //label
         title.innerText = event.target.children[0].innerText;
         title.style.backgroundColor = event.target.children[0].children[0].children[0].style.backgroundColor;
