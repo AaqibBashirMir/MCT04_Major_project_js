@@ -1,14 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body{
+
+body {
     background-color: rgb(243, 243, 243);
 
 }
-#navbar{
+
+#navbar {
     width: 100%;
     height: auto;
     background-color: white;
@@ -22,10 +24,11 @@ body{
 }
 
 
-#resume-logo{
+#resume-logo {
     margin: 6px;
 }
-#download-btn{
+
+#download-btn {
     margin: 6px;
     display: flex;
     align-items: center;
@@ -40,7 +43,7 @@ body{
 }
 
 
-#download-pdf{
+#download-pdf {
     background-color: green;
     border: none;
     color: white;
@@ -49,14 +52,17 @@ body{
     width: 100px;
 
 }
-#download-pdf:hover{
+
+#download-pdf:hover {
     background-color: darkgreen;
 }
-#download-btn:hover{
+
+#download-btn:hover {
     background-color: darkgreen;
 
 }
-#body{
+
+#body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -66,47 +72,36 @@ body{
     /* border: 1px blue solid; */
 }
 
-#template-type{
+#template-type {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    
+
 }
-#template-type-text{
+
+#template-type-text {
     font-weight: bold;
     font-size: 15px;
 }
-#type{
+
+#type {
     width: 450px;
     height: 25px;
     /* border: 2px blue solid; */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-#header-color{
+
+#header-bg-color {
     font-weight: bold;
     font-size: 15px;
-}
-#header-text-color{
-    font-weight: bold;
-    font-size: 15px;
-}
-#personal-detail-container{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 450px;
-    font-size: 15px;
-    font-weight: bold;
-}
-#name,#email,#number,#city{
-    border: none;
-    height:30px;
-    padding: 4px;
-    outline: none;
-    
 }
 
-#proffesional-detail-container{
+#header-text-color {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#personal-detail-container {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -114,20 +109,45 @@ body{
     font-size: 15px;
     font-weight: bold;
 }
-#job-title,#job-skill{
+
+#name,
+#email,
+#number,
+#city {
     border: none;
-    height:30px;
+    height: 30px;
+    padding: 4px;
+    outline: none;
+
+}
+
+#proffesional-detail-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 450px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#job-title,
+#hobbies,
+#languages,
+#job-skill {
+    border: none;
+    height: 30px;
     padding: 4px;
     outline: none;
 }
-#job-desc{
+
+#job-desc {
     outline: none;
     border: none;
     padding: 4px;
     overflow: hidden;
 }
 
-#outer-employement-container{
+#outer-employement-container {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -137,7 +157,7 @@ body{
     font-weight: 500;
 }
 
-#inner-employement-container{
+#inner-employement-container {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -149,11 +169,12 @@ body{
     /* display: none;  */
 
 }
-#inner-empl-parent{
+
+#inner-empl-parent {
     display: none;
 }
 
-#add-employe{
+#add-employe {
     height: 30px;
     background-color: brown;
     border: none;
@@ -161,27 +182,32 @@ body{
     font-weight: 600;
     color: bisque;
 }
-#add-employe:hover{
+
+#add-employe:hover {
     cursor: pointer;
     background-color: darkred;
 }
 
 
-#emp-start-date,#emp-end-date,#emp-title,#employer{
- 
+#emp-start-date,
+#emp-end-date,
+#emp-title,
+#employer {
+
     border: none;
-    height:30px;
+    height: 30px;
     padding: 4px;
     outline: none;
 }
-#emp-desc{
+
+#emp-desc {
     outline: none;
     border: none;
     padding: 4px;
     overflow-y: hidden;
 }
 
-#outer-project-container{
+#outer-project-container {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -191,7 +217,7 @@ body{
     font-weight: 500;
 }
 
-#inner-education-detail{
+#inner-education-detail {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -200,10 +226,12 @@ body{
     /* display: none; */
 
 }
-#inner-edu-parent{
+
+#inner-edu-parent {
     display: none;
 }
-#outer-education-detail{
+
+#outer-education-detail {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -212,13 +240,16 @@ body{
     font-size: 15px;
     font-weight: 500;
 }
-#edu-desc{
+
+#edu-desc {
     outline: none;
     border: none;
     padding: 4px;
     overflow-y: hidden;
 }
-#edu-btn{
+
+
+#edu-btn {
     height: 30px;
     background-color: brown;
     border: none;
@@ -226,26 +257,33 @@ body{
     font-weight: 600;
     color: bisque;
 }
-#edu-btn:hover{
+
+#edu-btn:hover {
     cursor: pointer;
     background-color: darkred;
 }
 
-#edu-start-date,#edu-end-date,#edu-qualif,#edu-sch-colleg{
+#edu-start-date,
+#edu-end-date,
+#edu-qualif,
+#edu-sch-colleg {
     border: none;
-    height:30px;
+    height: 30px;
     padding: 4px;
     outline: none;
 }
 
 
-#proj-start-date,#proj-end-date,#proj-title{
+#proj-start-date,
+#proj-end-date,
+#proj-title {
     border: none;
-    height:30px;
+    height: 30px;
     padding: 4px;
     outline: none;
 }
-#proj-desc{
+
+#proj-desc {
     outline: none;
     border: none;
     padding: 4px;
@@ -254,7 +292,7 @@ body{
 
 
 
-#inner-project-container{
+#inner-project-container {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -263,10 +301,12 @@ body{
     /* display: none; */
 
 }
-#inner-proj-parent{
+
+#inner-proj-parent {
     display: none;
 }
-#project-btn{
+
+#project-btn {
     height: 30px;
     background-color: brown;
     border: none;
@@ -274,119 +314,179 @@ body{
     font-weight: 600;
     color: bisque;
 }
-#project-btn:hover{
+
+#project-btn:hover {
     cursor: pointer;
-    background-color: rgb(139, 0, 0);
+    background-color: darkred;
 }
 
 
 
 
-#parent-container{
+#parent-container {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
+    justify-content: space-around;
     gap: 5px;
 }
-#resume-field{
+
+#resume-field {
     display: flex;
     flex-direction: column;
-    margin: 20px 0 20px 150px;
+    margin: 20px 20px 20px 150px;
     /* border: 1px red solid; */
-    box-shadow: 0 0 5px gray;
+    box-shadow: 0 0 10px rgb(116, 100, 112);
     overflow-y: hidden;
-    width: 650px;
-    height: 1000px;
+    width: 800px;
+    height: 1180px;
     /* display: none; */
     overflow-x: hidden;
+
 }
 
-#res-header{
+#res-header {
     display: flex;
     justify-content: space-between;
-    height: auto;
-    width: 650px;
-    padding: 15px;
-    background-color:rgb(74,82,104);
+    height: 190px;
+    width: 600px;
+    margin-left: -100px;
+    /* border: 1px red solid; */
+    /* padding: 15px; */
 }
-#res-name{
-    font-size: 25px;
+
+#res-header-flex {
+    /* border: 1px red solid; */
+    width: 400px;
+    height: 150px;
+
+}
+
+#res-name {
+    overflow: hidden;
+    color: #32485F;
+    /* border: 1px  red solid; */
+    font-size: 35px;
     font-weight: bold;
     /* border: 1px red solid; */
-    margin-left: 10px;
-    width: 220px;
-    word-wrap: break-word;
+    margin: 30px 0 0 50px;
+    width: 310px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-#res-job-title{
-    margin: 10px;
+
+#res-job-title {
+    width: 330px;
+    height: 40px;
+    font-size: 27px;
+    font-weight: 500;
+    padding: 0;
+    margin: 30px 0 0 50px;
+    color: #32485F;
     /* border: 1px red solid; */
-    padding-left: -20px;
-    height: auto;
-    width: 200px;
-    word-wrap: break-word;
+    overflow: hidden;
+
 }
-#res-header-cont{
-    /* border: 1px green solid; */
+
+#res-header-cont {
     height: auto;
-    width: 200px;
-    /* word-wrap: break-word; */
+    width: 250px;
+    word-wrap: break-word;
     display: flex;
     flex-direction: column;
     gap: 4px;
+    margin-left: -30px;
 }
-#res-cont-phone,#res-cont-mail,#res-cont-location,#header-cont-phone,#header-cont-mail,#header-cont-location{
-    /* border: green 1px solid; */
-    width: 180px;
+
+#res-cont-phone,
+#res-cont-mail,
+#res-cont-location {
+    font-weight: 400;
+    font-size: 18px;
+    color: rgb(231, 226, 226);
+    width: 150px;
     word-wrap: break-word;
 }
 
 
-#res-body{
+#res-body {
     display: flex;
     flex-direction: row;
     /* margin: 10px; */
     /* gap: 15px; */
 }
-#res-bdy-right{
+
+#res-bdy-right {
     padding: 10px;
-    background-color: rgba(42, 126, 165, 0.116);
+    background-color: rgba(161, 42, 165, 0.116);
     height: 1000px;
-    width: 450px;
+    width: 850px;
+    /* border: 2px black solid; */
+
 }
-#res-bdy-left{
-    background-color: lightgray;
-    height: 1000px;
+
+#res-bdy-left {
+    background-color: #32485F;
+    height: 1200px;
     padding: 10px;
+    width: 300px;
+    margin-top: -200px;
     /* box-shadow: 0 0 5px lightgray; */
- 
+
 }
-#res-cont-text,#res-skill-text,#summary-tex,#res-bdy-right-exp-text,#res-bdy-right-proj-text,#res-bdy-right-edu-text{
+
+#icons {
+    font-weight: 400;
+    font-size: 25px;
+    color: rgba(0, 255, 170, 0.582);
+}
+
+#res-cont-text,
+#res-skill-text,
+#res-hobbies-text,
+#res-languages-text {
+    font-size: 28px;
+    color: white;
+    font-weight: 500;
+}
+
+#summary-tex,
+#res-bdy-right-exp-text,
+#res-bdy-right-proj-text,
+#res-bdy-right-edu-text {
     font-weight: bold;
-    color:rgb(243, 243, 243);
-    background-color: rgb(30, 31, 30);
+    color: rgb(243, 243, 243);
+    background-color: rgb(43, 153, 187);
     padding: 4px;
 }
-#res-bdy-ryt-contain{
+
+#res-bdy-ryt-contain {
     /* border: 1px red solid; */
     max-height: 80px;
     font-size: 15px;
     font-weight: 500;
     overflow: hidden;
+    
+
 }
-#res-bdy-rt-exp-contain{
+
+#res-bdy-rt-exp-contain {
     /* border: 1px red solid; */
     max-height: 200px;
     font-size: 15px;
     font-weight: 500;
     overflow: hidden;
+    /* border: 2px solid red; */
 }
-#res-bdy-rt-proj-contain{
+
+#res-bdy-rt-proj-contain {
     /* border: 1px red solid; */
-    max-height: 60px;
+    max-height: 200px;
     font-size: 15px;
     font-weight: 500;
     overflow: hidden;
+
 }
-#res-bdy-rt-edu-contain{
+
+#res-bdy-rt-edu-contain {
     /* border: 1px red solid; */
     max-height: 200px;
     font-size: 15px;
@@ -394,62 +494,543 @@ body{
     overflow: hidden;
 }
 
-#skills{
+#skills,
+#fetched-languages,
+#fetched-hobbies {
     /* border: red 1px solid; */
     word-wrap: break-word;
     width: 190px;
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(231, 226, 226);
 }
-#res-bdy-ryt-contain,#res-bdy-rt-proj-contain,#res-bdy-rt-exp-contain,#res-bdy-rt-edu-contain{
+
+#res-bdy-ryt-contain,
+#res-bdy-rt-proj-contain,
+#res-bdy-rt-exp-contain,
+#res-bdy-rt-edu-contain {
     /* border: red 1px solid; */
     width: 400px;
     word-wrap: break-word;
 }
 
-#clear-btn{
+#clear-btn {
     background-color: rgb(121, 118, 118);
     height: 20px;
     width: 150px;
     border: none;
     text-align: center;
     color: white;
+
 }
 
 
 
- /* media querries */
- @media only screen and (max-width: 1200px){
-    #parent-container{
+/* media querries */
+@media only screen and (max-width: 1270px) {
+    #res-header-cont {
+        height: auto;
+        max-width: 400px;
+        word-wrap: break-word;
+
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding-right: 40px;
+        display: none;
+    }
+
+    #header-cont-phone,
+    #header-cont-mail,
+    #header-cont-location {
+        /* border: green 1px solid; */
+        width: 110px;
+        word-wrap: break-word;
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 1270px) {
+    #parent-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        /* width: 600px; */
+
+    }
+
+    #resume-field {
+        display: flex;
+        flex-direction: column;
+        /* margin: 20px 0 20px 150px; */
+        /* border: 1px red solid; */
+        box-shadow: 0 0 5px gray;
+        overflow-y: hidden;
+        width: 500px;
+        height: 1200px;
+        /* display: none; */
+        overflow-x: hidden;
+        /* border: 1px red solid; */
+        margin-left: 2px;
+
+    }
+
+    #res-header {
+        display: flex;
+        justify-content: space-between;
+        height: 120px;
+        width: auto;
+        margin-left: -100px;
+        /* border: 1px red solid; */
+    }
+
+    #res-name {
+        overflow: hidden;
+        color: #32485F;
+        /* border: 1px  red solid; */
+        font-size: 27px;
+        font-weight: bold;
+        /* border: 1px red solid; */
+        margin: 30px 0 0 10px;
+        width: 310px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    #res-job-title {
+        width: 300px;
+        height: 40px;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 0;
+        margin: 20px 0 0 10px;
+        color: #32485F;
+        /* border: 1px red solid; */
+        overflow: hidden;
+
+    }
+
+    #res-bdy-left {
+        height: 1300px;
+        padding: 10px;
+        /* box-shadow: 0 0 5px lightgray; */
+        width: 190px;
+        padding-top: 70px;
+
+
+    }
+
+    #output {
+        margin-top: 30px;
+        width: 170px;
+        height: 170px;
+    }
+
+    #res-bdy-right {
+        padding: 10px;
+        height: 1200px;
+        width: 310px;
+        /* border: 2px black solid; */
+    }
+
+    #summary-tex,
+    #res-bdy-right-exp-text,
+    #res-bdy-right-proj-text,
+    #res-bdy-right-edu-text {
+        font-weight: bold;
+        color: rgb(243, 243, 243);
+        background-color: rgb(43, 153, 187);
+        padding: 4px;
+        width: 290px;
+    }
+
+    #res-bdy-rt-exp-contain {
+        /* border: 1px red solid; */
+        max-height: 200px;
+        font-size: 15px;
+        font-weight: 500;
+        overflow: hidden;
+        /* border: 2px solid red; */
+        max-width: 290px;
+    }
+
+    #res-bdy-rt-proj-contain {
+        /* border: 1px red solid; */
+        max-height: 60px;
+        font-size: 15px;
+        font-weight: 500;
+        overflow: hidden;
+        max-width: 290px;
+    }
+
+    #res-bdy-rt-edu-contain {
+        /* border: 1px red solid; */
+        max-height: 200px;
+        font-size: 15px;
+        font-weight: 500;
+        overflow: hidden;
+        max-width: 290px;
+    }
+    #res-bdy-ryt-contain{
+        max-height: 200px;
+        font-size: 15px;
+        font-weight: 500;
+        overflow: hidden;
+        max-width: 290px;
+    }
+
+    #res-header-cont {
+        height: auto;
+        width: 160px;
+        /* word-wrap: break-word; */
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        display: none;
+    }
+
+
+}
+
+@media only screen and (max-width: 1000px) {
+    #parent-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        /* width: 600px; */
+
+    }
+
+    #resume-field {
+        display: flex;
+        flex-direction: column;
+        /* margin: 20px 0 20px 150px; */
+        /* border: 1px red solid; */
+        box-shadow: 0 0 5px gray;
+        overflow-y: hidden;
+        width: 400px;
+        height:1100px;
+        /* display: none; */
+        overflow-x: hidden;
+        /* border: 1px red solid; */
+        margin-left: 2px;
+
+    }
+
+    #res-header {
+        display: flex;
+        justify-content: space-between;
+        height: 90px;
+        width: 400px;
+        padding: 15px;
+    }
+
+    #res-cont-phone,
+    #res-cont-mail,
+    #res-cont-location {
+        font-weight: 300;
+        font-size: 15px;
+        color: rgb(231, 226, 226);
+        width: 110px;
+        word-wrap: break-word;
+    }
+
+    #res-name {
+        overflow: hidden;
+        color: #32485F;
+        font-size: 22px;
+        font-weight: bold;
+        /* border: 1px red solid; */
+        margin: 15px 0 0 -10px;
+        width: 310px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+
+    #res-job-title {
+        margin: 10px;
+        /* border: 1px red solid; */
+        padding-left: -20px;
+        height: auto;
+        width: 200px;
+        word-wrap: break-word;
+        display: none;
+    }
+
+    #res-bdy-left {
+        height: 1210px;
+        padding: 10px;
+        /* box-shadow: 0 0 5px lightgray; */
+        /* border: 1px solid blue; */
+        width: 150px;
+        padding-top: 100px;
+
+    }
+
+    #skills,
+    #fetched-languages,
+    #fetched-hobbies {
+        /* border: red 1px solid; */
+        word-wrap: break-word;
+        width: 140px;
+        font-weight: 300;
+        font-size: small;
+    }
+
+    #output {
+        margin-top: 30px;
+        width: 130px;
+        height: 130px;
+    }
+
+
+    #res-bdy-right {
+        padding: 10px;
+        height: 1100px;
+        width: 270px;
+        /* border: 2px black solid; */
+    }
+    
+#clear-btn {
+    background-color: rgb(121, 118, 118);
+    height: 20px;
+    width: 130px;
+    border: none;
+    text-align: center;
+    color: white;
+
+}
+#signature-pad{
+    width: 130px;
+}
+
+    #summary-tex,
+    #res-bdy-right-exp-text,
+    #res-bdy-right-proj-text,
+    #res-bdy-right-edu-text {
+        font-weight: bold;
+        color: rgb(243, 243, 243);
+        background-color: rgb(43, 153, 187);
+        padding: 4px;
+        width: 220px;
+    }
+
+    #start-date-exp,
+    #end-date-exp,
+    #start-date-proj,
+    #end-date-proj,
+    #start-date-edu,
+    #end-date-edu {
+        display: none;
+    }
+
+    #res-bdy-rt-exp-contain {
+        /* border: 1px red solid; */
+        max-height: 200px;
+        font-size: 15px;
+        font-weight: 500;
+        overflow: hidden;
+        /* border: 2px solid red; */
+        max-width: 210px;
+    }
+
+    #res-bdy-rt-proj-contain {
+        /* border: 1px red solid; */
+        max-height: 200px;
+        font-size: 15px;
+        font-weight: 500;
+        overflow: hidden;
+        max-width: 210px;
+    }
+
+    #res-bdy-rt-edu-contain {
+        /* border: 1px red solid; */
+        max-height: 200px;
+        font-size: 15px;
+        font-weight: 500;
+        overflow: hidden;
+        max-width: 210px;
+    }
+    #res-bdy-ryt-contain{
+        max-height: 200px;
+        font-size: 15px;
+        font-weight: 500;
+        overflow: hidden;
+        max-width: 210px;
+    }
+
+    #res-header-cont {
+        height: auto;
+        width: 160px;
+        /* word-wrap: break-word; */
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+}
+
+@media only screen and (max-width: 891px) {
+    #parent-container {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        width: 600px;
+        /* width: 600px; */
+
     }
- }
+
+    #resume-field {
+        display: flex;
+        flex-direction: column;
+        /* margin: 20px 0 20px 150px; */
+        /* border: 1px red solid; */
+        box-shadow: 0 0 5px gray;
+        overflow-y: hidden;
+        width: 460px;
+
+        height: 1200px;
+        /* display: none; */
+        overflow-x: hidden;
+        margin-left: 2px;
+
+    }
+
+    #res-header {
+        display: flex;
+        justify-content: space-between;
+        height: 120px;
+        width: 3500px;
+        padding: 15px;
+        /* border: 1px solid green; */
+    }
+
+    #res-bdy-left {
+        height: 1300px;
+        padding: 10px;
+        /* box-shadow: 0 0 5px lightgray; */
+        /* border: 1px solid blue; */
+        width: 166px;
+        padding-top: 70px;
+
+    }
+
+    #res-bdy-right {
+        padding: 10px;
+        height: 1200px;
+        width: 240px;
+    }
+
+    #res-bdy-rt-exp-contain {
+        /* border: 1px red solid; */
+        max-height: 200px;
+        font-size: 15px;
+        font-weight: 500;
+        overflow: hidden;
+        /* border: 2px solid red; */
+        max-width: 210px;
+        /* display: none; */
+    }
+
+    #res-bdy-rt-proj-contain {
+        /* border: 1px red solid; */
+        max-height: 200px;
+        font-size: 15px;
+        font-weight: 500;
+        overflow: hidden;
+        max-width: 210px;
+        /* display: none; */
+
+    }
+
+    #res-bdy-rt-edu-contain {
+        /* border: 1px red solid; */
+        max-height: 200px;
+        font-size: 15px;
+        font-weight: 500;
+        overflow: hidden;
+        max-width: 210px;
+        /* display: none; */
+
+    }
+
+    #res-header-cont {
+        /* border: 1px green solid; */
+        height: auto;
+        width: 160px;
+        /* word-wrap: break-word; */
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        /* display: none; */
+    }
+
+    #res-bdy-ryt-contain {
+        /* border: 1px red solid; */
+        max-height: 80px;
+        font-size: 15px;
+        font-weight: 500;
+        overflow: hidden;
+        /* display: none; */
+
+    }
+
+    #res-job-title {
+        margin: 10px;
+        /* border: 1px red solid; */
+        padding-left: -20px;
+        height: auto;
+        width: 200px;
+        word-wrap: break-word;
+        /* display: none; */
+    }
+
+    #res-name {
+        font-size: 25px;
+        font-weight: bold;
+        /* border: 1px red solid; */
+        margin-left: 10px;
+        width: 220px;
+        word-wrap: break-word;
+        /* display: none; */
+    }
+ 
+
+}
+
+@media only screen and (max-width: 776px) {
+    #parent-container {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-around; */
+        /* width: 600px; */
+
+    }
+
+    #resume-field {
+        display: flex;
+        flex-direction: column;
+        /* margin: 20px 0 20px 150px; */
+        /* border: 1px red solid; */
+        box-shadow: 0 0 5px gray;
+        overflow-y: hidden;
+        width: 460px;
+        height: 1200px;
+        /* display: none; */
+        overflow-x: hidden;
+        /* border: 1px red solid; */
+        margin-left: 2px;
+
+    }
+
+    #res-bdy-right {
+        padding: 10px;
+        height: 1200px;
+        width: 450px;
+        /* border: 2px black solid; */
+    }
+    #res-bdy-left{
+        height: 1400px;
+    }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
