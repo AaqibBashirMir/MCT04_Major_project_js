@@ -13,7 +13,7 @@
    The resume display section is segmented into a header and body, with the body further divided into left and right sides. The left 
      side features an image upload section, contact details, skills, languages, hobbies, and a signature field. The right side displays a summary, professional experience, projects, and educational background. The use of JavaScript and the Signature Pad library suggests additional dynamic features, possibly enabling users to add a signature to their resumes. External script links and a local script file, "resume.js," imply the integration of external libraries and custom scripting to enhance the functionality of the resume creation form.
 
-The provided CSS code is part of a comprehensive stylesheet designed for a web-based resume generator application. It begins with a universal selector, setting default styles like zero margin, padding, and specifying a font stack for the entire document. The styles applied to the body element include a light gray background.
+💡The provided CSS code is part of a comprehensive stylesheet designed for a web-based resume generator application. It begins with a universal selector, setting default styles like zero margin, padding, and specifying a font stack for the entire document. The styles applied to the body element include a light gray background.
 
 The #navbar section is styled to create a navigation bar with a white background, flex container properties for spacing and alignment, and padding. Specific styles are defined for elements like #resume-logo, #download-btn, and #download-pdf, giving a distinctive appearance to a download button.
 
