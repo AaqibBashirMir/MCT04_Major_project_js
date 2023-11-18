@@ -8,7 +8,6 @@ let resumeBdyLeft = document.querySelector("#res-bdy-left").style.display = "non
 
 
 resumeType.addEventListener("input", (e) => {
-
     if (resumeType.value == "Two-Column") {
         if(screen.width<=1269){
             let resSumTextTwo=document.querySelector("#summary-tex").style.width="275px";
@@ -16,6 +15,7 @@ resumeType.addEventListener("input", (e) => {
             let resExpTexTwo=document.querySelector("#res-bdy-right-exp-text").style.width="275px"
             let resEduTexTwo=document.querySelector("#res-bdy-right-edu-text").style.width="275px"
         }
+        let inputPicTwo=document.querySelector("#add-pic").style.display="block"
         let resHeader = document.querySelector("#res-header");
         resHeader.style.width = "650px"
         resHeader.style.marginLeft = "220px"
@@ -43,6 +43,7 @@ resumeType.addEventListener("input", (e) => {
         console.log(1);
         let resWidth = document.querySelector("#res-bdy-right").style.width = "750px"
         let inputFile = document.querySelector("#file").style.display = "none"
+        let inputPicNmae=document.querySelector("#add-pic").style.display="none"
         var image = document.getElementById('output').style.display = "none"
         let resumeBdyLeft = document.querySelector("#res-bdy-left").style.display = "none";
         let resHeader = document.querySelector("#res-header");
