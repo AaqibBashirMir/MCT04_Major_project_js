@@ -62,7 +62,11 @@ Overall, your JavaScript code is responsible for creating a dynamic and interact
 
 Thank you for your attention. Feel free to explore the HTML code further and customize it for your needs.<br>
 
+<h3>UI:-</h3>
 
 
+
+
+![Screenshot 2023-11-18 222659](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/35392012/2eecd069-9054-4116-8964-914d6144a648)
 
 
