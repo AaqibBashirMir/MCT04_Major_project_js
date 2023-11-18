@@ -3,7 +3,7 @@ HOSTED LINK:
 
 WORKING FLOW:
 
-https://www.dropbox.com/scl/fi/n3y664f7x5dgfw1fhtc63/PaymentIntegration.mov?rlkey=2xneh44egj4jwxborlv6b69rb&dl=0
+https://www.veed.io/view/ddd1d9b9-5d72-420c-9dfd-7b7de73e9e10?panel=share
 
 UI LINK:
 
