@@ -125,7 +125,7 @@ function createNewCard(ele) {
     div1.classList.add('custom-input');
     div1.innerHTML = `<div class="board-add-card">+ Add Card</div>`;
     div.appendChild(div1);
-
+    console.log(ele.target.innerHTML);
     if (ele.classList.contains('board')) {
         ele.children[0].appendChild(div);
     } else {
@@ -335,7 +335,7 @@ function onCardClick(event) {
         date_update.innerText = event.target.children[3].children[0].innerText;
     }
 }
-
+popupDashboardDataUpdate();
 function popupDashboardDataUpdate() {
     let title = document.querySelector('#title');
     let desc = document.querySelector('.desc');
@@ -357,7 +357,6 @@ function popupDashboardDataUpdate() {
     card.children[1].innerText = localStorage.getItem(id + "_card");
     card.children[2].innerText = localStorage.getItem(id + "_desc");
     card.children[3].innerText = localStorage.getItem(id + "_date");
-
     localStorage.clear();
 }
 main.addEventListener('click', (event) => {
