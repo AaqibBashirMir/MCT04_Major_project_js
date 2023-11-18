@@ -10,6 +10,12 @@ let resumeBdyLeft = document.querySelector("#res-bdy-left").style.display = "non
 resumeType.addEventListener("input", (e) => {
 
     if (resumeType.value == "Two-Column") {
+        if(screen.width<=1269){
+            let resSumTextTwo=document.querySelector("#summary-tex").style.width="275px";
+            let resProjTexTwo=document.querySelector("#res-bdy-right-proj-text").style.width="275px"
+            let resExpTexTwo=document.querySelector("#res-bdy-right-exp-text").style.width="275px"
+            let resEduTexTwo=document.querySelector("#res-bdy-right-edu-text").style.width="275px"
+        }
         let resHeader = document.querySelector("#res-header");
         resHeader.style.width = "650px"
         resHeader.style.marginLeft = "220px"
@@ -26,6 +32,13 @@ resumeType.addEventListener("input", (e) => {
         let addFile=document.querySelector("#add-file").style.display="block"
     }
     else if (resumeType.value == "Minimalist") {
+
+        if(screen.width<=1269){
+            let resSumText=document.querySelector("#summary-tex").style.width="478px";
+            let resProjTex=document.querySelector("#res-bdy-right-proj-text").style.width="478px"
+            let resExpTex=document.querySelector("#res-bdy-right-exp-text").style.width="478px"
+            let resEduTex=document.querySelector("#res-bdy-right-edu-text").style.width="478px"
+        }
         let resField = document.querySelector("#resume-field").style.display = "block"
         console.log(1);
         let resWidth = document.querySelector("#res-bdy-right").style.width = "750px"
@@ -46,7 +59,15 @@ resumeType.addEventListener("input", (e) => {
 
 })
 
+if(screen.width<=460){
+    let bacColor=document.querySelector("#body").style.width="200px";
+    console.log("hi");
+}
 
+// logo reload
+function reload(){
+    location.reload();
+}
 
 // bg-color chnger
 let hedBgColor = document.querySelector("#bg-color");
@@ -70,7 +91,7 @@ function loadFile(event) {
 // signature js code
 var signature = document.querySelector("#signature-pad");
 var signaturePad = new SignaturePad(signature, {
-    backgroundColor: "lightblue"
+    backgroundColor: "white"
 });
 
 let clearButon = document.querySelector("#clear-btn").addEventListener("click", () => {
@@ -264,6 +285,7 @@ educationBtn.addEventListener("click", (e) => {
 let downloadBtn = document.querySelector("#download-btn");
 downloadBtn.addEventListener("click", (e) => {
     console.log("download");
+    let bgColor=document.querySelector("#parent-container").style.background="none"
     let inputFile = document.querySelector("#file").style.display = "none"
     let clearButton = document.querySelector("#clear-btn").style.display = "none";
     let bodyupper = document.querySelector("#body").style.display = "none";

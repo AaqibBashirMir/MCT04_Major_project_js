@@ -61,3 +61,11 @@ The code provides a mechanism to send the invoice via email.
 When the user clicks the 'Send Invoice' button in the modal, an email is composed with the invoice details. 
 This feature enhances the user experience by facilitating easy sharing of generated invoices.
 
+## Screenshots
+![1](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/122971264/5b1b4aa3-41d6-4bbf-b6f1-7a410ff2ef64)
+![2](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/122971264/65efd348-dd40-4f9d-8c0e-0adfda14bfd1)
+![3](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/122971264/fdb7a02e-9285-452f-b0fa-065e49785c72)
+![4](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/122971264/81d1258a-d1e0-41d8-9586-55bfc7b2c64f)
+
+
+
