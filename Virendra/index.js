@@ -77,7 +77,7 @@ function createNewBoard() {
     container.appendChild(board);
     closeForm();
     addBoard_button();
-    deleteCard
+    addCard_btn();
 };
 
 //-----------------------Adding cards------------------------
@@ -122,15 +122,21 @@ function createNewCard(ele) {
         <p class="card-footer-item"></p>
     </div> 
 `;
-    let div1 = document.createElement('div');
-    div1.classList.add('custom-input');
-    div1.innerHTML = `<div class="board-add-card">+ Add Card</div>`;
-    div.appendChild(div1);
+    // let div1 = document.createElement('div');
+    // div1.classList.add('custom-input');
+    // div1.innerHTML = `<div class="board-add-card">+ Add Card</div>`;
+    // div.appendChild(div1);
     // console.log(ele.target.innerHTML);
     if (ele.classList.contains('board')) {
+        let div1 = document.createElement('div');
+        div1.classList.add('custom-input');
+        div1.innerHTML = `<div class="board-add-card">+ Add Card</div>`;
+        div.appendChild(div1);
         ele.children[0].appendChild(div);
+        
     } else {
         ele.appendChild(div);
+       
     }
     addingForm();
     more_icon();
@@ -254,7 +260,7 @@ function deleteBoard() {
         })
     })
 }
-//--------------------Delete Board----------------------------------
+//--------------------Delete cards----------------------------------
 let delete_btns = document.querySelectorAll('.card-top-more');
 delete_btns.forEach((delete_btn) => {
     delete_btn.addEventListener('click', () => {
