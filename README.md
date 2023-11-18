@@ -3,7 +3,7 @@
 <h1>Hosted Link:-</h1>
 https://aaqibbashirmir.github.io/MCT04_TEAM02/
 <h2>Description:-</h2>
-This is the readme of the whole project with project names, and  the collabrators and there hosted links:
+This is the readme of the whole project with project names, and  the collabrators and there hosted links:<br>
 [***Project - 1  Flipkart Page Sort and Filter***](https://www.notion.so/Project-1-Flipkart-Page-Sort-and-Filter-f24da702fbbf4995a1902baf36c6f613?pvs=21)
 
 [Project 2 - HTML CSS JS Editor](https://www.notion.so/Project-2-HTML-CSS-JS-Editor-b736c1d9e9a84e228f58abcb54b14ea9?pvs=21)
