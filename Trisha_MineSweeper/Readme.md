@@ -51,3 +51,28 @@ The code is for the logic of a Minesweeper game. It defines tile statuses, creat
 <h2> Summary </h2>
 
 In summary, this code sets up the basic structure for a Minesweeper game, including the game title, mine count display, game board, rules section, difficulty level buttons, and a restart button. The actual functionality and interactivity of the game are likely implemented using JavaScript.
+
+<h2> UI </h2>
+<h4> Main Page UI:- </h4>
+
+![image](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/126088849/9aebda1a-4dad-453b-bb6a-3d9c91b0a834)
+
+<h4> Beginner Level:- </h4>
+
+![image](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/126088849/7cbdc8a5-28d4-48f0-b418-874914dc2f7c)
+
+<h4> Intermidiate Level:- </h4>
+
+![image](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/126088849/417b8961-aa44-4c8d-bff4-513577ca9b62)
+
+<h4> Expert Level:- </h4>
+
+![image](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/126088849/0baa2398-6eea-40c7-9386-399ee75022c2)
+
+<h4> Checking Mines:- </h4>
+
+![image](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/126088849/6a687479-9323-44f3-8225-2d2a4c8a55d2)
+
+<h4> If mines found:- </h4>
+
+![image](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/126088849/a97b7f14-6e01-4a10-9922-b27a2671451d)

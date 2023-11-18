@@ -36,10 +36,15 @@
                 </select>
 
             </div>
+            <p id="add-file" style="display: none;">
+                <span id="addPhoto" style=" font-weight: bold; font-size: 15px;">Add photo</span>
+                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"
+                    style="border-radius: 4px;width: 90px;display: none;">
+            </p>
 
             <div id="header-color-changers">
                 <!-- hheader color changer -->
-                <p id="header-bg-color">Header Background Color</p>
+                <p id="header-bg-color">Body Background Color</p>
                 <input id="bg-color" type="color" style="margin-bottom: 10px;">
 
                 <!-- header text color changer -->
@@ -50,18 +55,20 @@
             <!-- personal detail  thta input user will give -->
             <div id="personal-detail-container">
                 <p id="personal-detail">Personal Details</p>
-                <input type="text" placeholder="Name" id="name" class="personal-name" maxlength="70">
-                <input type="text" placeholder="E-mail ID" id="email" class="personal-name" maxlength="70">
+                <input type="text" placeholder="Name" id="name" class="personal-name" maxlength="25">
+                <input type="text" placeholder="E-mail ID" id="email" class="personal-name" maxlength="40">
                 <input type="tel" placeholder="Phone Number" id="num" class="personal-name" maxlength="16">
-                <input type="text" placeholder="City, Country" id="city" class="personal-name" maxlength="70">
+                <input type="text" placeholder="City, Country" id="city" class="personal-name" maxlength="50">
             </div>
 
             <!-- profesional details input user -->
             <div id="proffesional-detail-container">
                 <p id="proffesional-details">Professional Details</p>
-                <input type="text" placeholder="Wanted job title" id="job-title" maxlength="70">
-                <textarea name="" id="job-desc" cols="30" rows="5" placeholder="Description" maxlength="202"></textarea>
+                <input type="text" placeholder="Wanted job title" id="job-title" maxlength="15">
+                <textarea name="" id="job-desc" cols="30" rows="5" placeholder="Description" maxlength="170"></textarea>
                 <input type="text" placeholder="Skills" id="job-skill" maxlength="70">
+                <input type="text" placeholder="Languages" id="languages" maxlength="70">
+                <input type="text" placeholder="Hobbies" id="hobbies" maxlength="70">
             </div>
 
             <!-- employement part input user -->
@@ -70,10 +77,10 @@
                 <div id="inner-empl-parent">
                     <div id="inner-employement-container">
                         <p id="emp-start">Start</p>
-                        <input type="date" id="emp-start-date">
+                        <input type="date" id="emp-start-date" maxlength="10">
                         <p id="emp-End">End</p>
-                        <input type="date" id="emp-end-date" maxlength="70">
-                        <input type="text" id="emp-title" placeholder="job title" maxlength="70">
+                        <input type="date" id="emp-end-date" maxlength="10">
+                        <input type="text" id="emp-title" placeholder="job title" maxlength="20">
                         <input type="text" id="employer" placeholder="Employer" maxlength="70">
                         <textarea maxlength="202" name="" id="emp-desc" cols="30" rows="5"
                             placeholder="Description"></textarea>
@@ -91,7 +98,7 @@
                         <input type="date" id="proj-start-date">
                         <p id="proj-end">End</p>
                         <input type="date" id="proj-end-date">
-                        <input type="text" id="proj-title" placeholder="Project-title" maxlength="70">
+                        <input type="text" id="proj-title" placeholder="Project-title" maxlength="20">
                         <textarea maxlength="300" name="" id="proj-desc" cols="30" rows="5"
                             placeholder="Description"></textarea>
                     </div>
@@ -105,12 +112,12 @@
                 <div id="inner-edu-parent">
                     <div id="inner-education-detail">
                         <p id="edu-start">Start</p>
-                        <input type="date" id="edu-start-date">
+                        <input type="date" id="edu-start-date" maxlength="10">
                         <p id="edu-end">End</p>
-                        <input type="date" id="edu-end-date">
-                        <input type="text" id="edu-qualif" placeholder="Qualification" maxlength="70">
-                        <input type="text" id="edu-sch-colleg" placeholder="School/College">
-                        <textarea maxlength="300" id="edu-desc" cols="30" rows="5" placeholder="Description"></textarea>
+                        <input type="date" id="edu-end-date" maxlength="10">
+                        <input type="text" id="edu-qualif" placeholder="Qualification" maxlength="20">
+                        <input type="text" id="edu-sch-colleg" placeholder="School/College" maxlength="30">
+                        <textarea maxlength="200" id="edu-desc" cols="30" rows="5" placeholder="Description"></textarea>
                     </div>
                 </div>
             </div>
@@ -122,39 +129,33 @@
             <div id="res-header">
                 <div id="res-header-img-name">
                     <!-- here is important html of image that any user can upload his/her -->
-                    <div class="imageUpload">
-                        <p><img src="download (4).jpg" id="output" width="110" height="110"
-                                style="border-radius: 50%;" /></p>
-                        <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"
-                                style="border: none;width: 80px;border-radius: 4px;margin-left: 14px;"></p>
-                    </div>
                     <!-- name and job in the header -->
-                    <div id="res-header-flex">
+                    <div id="res-header-name-job">
                         <h3 id="res-name">
                             Aaqib Bashir Mir
                         </h3>
-                        <h5 id="res-job-title">
+                        <p id="res-job-title">
                             SDE at Amazon
-                        </h5>
+                        </p>
                     </div>
                 </div>
                 <!-- res header contact part here -->
                 <div id="res-header-cont">
-                    <p style="display: flex;"><span class="material-symbols-outlined">
-                            call
-                        </span><span id="header-cont-phone" style="   font-weight: 500;
-                        font-size: 15px;">+91
-                            67367433673</span></p>
+                    <p style="display: flex;"><span class="material-symbols-outlined">  call  </span>
+                        <span id="header-cont-phone" style="font-weight: 500; font-size: 15px;width: 150px;">+91 67367433673</span>
+                    </p>
                     <p style="display: flex;flex-direction: row;"><span class="material-symbols-outlined">
                             mail
                         </span><span id="header-cont-mail" style="   font-weight: 500;
-                            font-size: 15px;">dazzlingmustakeen@gmail.com</span></p>
+                            font-size: 15px;width:150px;margin-right: 50px;">dazzlingmustakeen@gmail.com</span>
+                    </p>
                     <p style="display: flex;flex-direction: row;"><span class="material-symbols-outlined">
                             location_on
                         </span><span id="header-cont-location" style="   font-weight: 500;
-                        font-size: 15px;"> Jammu and
+                        font-size: 15px;width: 150px;"> Jammu and
                             Kashmir India
-                        </span></p>
+                        </span>
+                    </p>
                 </div>
             </div>
 
@@ -162,33 +163,55 @@
             <div id="res-body">
                 <!-- resume body left side -->
                 <div id="res-bdy-left">
-                    <div id="res-skill-field">
-                        <p id="res-skill-text">SKILLS</p>
-                        <div id="skills">
-                           
-                        </div><br>
+                    <div class="imageUpload">
+                        <p><img src="download (4).jpg" id="output" width="200" height="200"
+                                style="border-radius: 50%;margin-top: 20px;border:10px solid gray;" /></p>
                     </div>
+
                     <!--  left-body contact side  here -->
                     <div id="res-contact-field" style="display: flex;flex-direction: column;">
                         <p id="res-cont-text">Contact</p>
-                        <p style="display: flex;"><span class="material-symbols-outlined">
+                        <p style="display: flex;"><span id="icons" class="material-symbols-outlined ">
                                 call
-                            </span><span id="res-cont-phone" style="   font-weight: 500;
-                                font-size: 15px;">67367433673</span></p>
-                        <p style="display: flex;"><span class="material-symbols-outlined">
+                            </span><span id="res-cont-phone">67367433673</span></p>
+                        <p style="display: flex;"><span id="icons" class="material-symbols-outlined">
                                 mail
-                            </span><span id="res-cont-mail" style="   font-weight: 500;
-                                font-size: 15px;">abc123@gmial.com</span></p>
-                        <p style="display: flex;flex-direction: row;"><span class="material-symbols-outlined">
+                            </span><span id="res-cont-mail">abc123@gmial.com</span></p>
+                        <p style="display: flex;flex-direction: row;"><span id="icons"
+                                class="material-symbols-outlined">
                                 location_on
-                            </span><span id="res-cont-location" style="   font-weight: 500;
-                            font-size: 15px;">jammu and
+                            </span><span id="res-cont-location">jammu and
                                 Kashmir India
                             </span></p>
                     </div><br>
+                    <!-- skill field -->
+                    <div id="res-skill-field">
+                        <p id="res-skill-text">SKILLS</p>
+                        <div id="skills">
+                            JavaScript, Java, DSA, HTML, CSS, Communication
+                        </div><br>
+                        <!-- language field -->
+                    </div>
+                    <div id="res-languages-field">
+                        <p id="res-languages-text">Language</p>
+                        <div id="fetched-languages">
+                            English,Urdu,Kashmiri.
+                        </div><br>
+                    </div>
+                    <!-- hobbies field -->
+                    <div id="res-hobbies-field">
+                        <p id="res-hobbies-text">Hobbies</p>
+                        <div id="fetched-hobbies">
+                            Volley Ball, Cricket, Coding
+                        </div><br>
+                    </div>
+
                     <!-- signature code -->
                     <div class="flex-column">
-                        <p id="sign-text" style="font-size: 15px;font-weight: bold;color: rgb(15, 15, 15);">Signature</p>
+                        <p id="sign-text" style=" font-size: 28px;
+                        color: white;
+                        font-weight: 500;">Signature
+                        </p>
                         <div class="wrapper">
                             <canvas id="signature-pad" width="150" height="100"></canvas>
                         </div>
@@ -213,9 +236,9 @@
                         <div id="res-bdy-rt-exp-contain">
                             <div id="fetched-jobtitle-date" style="display: flex;justify-content: space-between;">
                                 <li id="fetched-job-title">sde</li>
-                                <div id="fetched-start-end-date-exp">
-                                    <span id="start-date-exp">03-03-2023</span>
-                                    <span id="end-date-exp">3-01-2023</span>
+                                <div id="fetched-start-end-date-exp" style="display: flex;gap: 10px;">
+                                    <span id="start-date-exp" style="color: blue;">03-03-2023</span>
+                                    <span id="end-date-exp" style="color: blue;">3-01-2023</span>
                                 </div>
                             </div>
                             <li id="employer-fetched">Developer at Geekster</li>
@@ -228,9 +251,9 @@
                         <div id="res-bdy-rt-proj-contain">
                             <div id="fetched-project-date" style="display: flex;justify-content: space-between;">
                                 <li id="fetched-proj-title">Resume Generator</li>
-                                <div id="fetched-start-end-date-proj">
-                                    <span id="start-date-proj">13-11-2023</span>
-                                    <span id="end-date-proj">16-11-2023</span>
+                                <div id="fetched-start-end-date-proj" style="display: flex;gap: 10px;">
+                                    <span id="start-date-proj" style="color: blue;">13-11-2023</span>
+                                    <span id="end-date-proj" style="color: blue;">16-11-2023</span>
                                 </div>
                             </div><br>
                             <p id="res-proj-desc">I have created dynamic resume generator applied js!</p>
@@ -242,9 +265,9 @@
                         <div id="res-bdy-rt-edu-contain">
                             <div id="fetched-jobtitle-date" style="display: flex;justify-content: space-between;">
                                 <li id="fetched-qualif-title">Btech</li>
-                                <div id="fetched-start-end-date-exp">
-                                    <span id="start-date-edu">05-09-2018</span>
-                                    <span id="end-date-edu">30-12-2022</span>
+                                <div id="fetched-start-end-date-exp" style="display: flex;gap: 10px;">
+                                    <span id="start-date-edu" style="color: blue;">05-09-2018</span>
+                                    <span id="end-date-edu" style="color: blue">30-12-2022</span>
                                 </div>
                             </div>
                             <li id="colleg-fetched">University Of Kashmir</li>
@@ -256,7 +279,9 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.5/signature_pad.min.js" integrity="sha512-kw/nRM/BMR2XGArXnOoxKOO5VBHLdITAW00aG8qK4zBzcLVZ4nzg7/oYCaoiwc8U9zrnsO9UHqpyljJ8+iqYiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.5/signature_pad.min.js"
+        integrity="sha512-kw/nRM/BMR2XGArXnOoxKOO5VBHLdITAW00aG8qK4zBzcLVZ4nzg7/oYCaoiwc8U9zrnsO9UHqpyljJ8+iqYiQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./resume.js"></script>
 </body>
 
