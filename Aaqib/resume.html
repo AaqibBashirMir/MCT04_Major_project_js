@@ -15,46 +15,50 @@
     <!-- navbar -->
     <nav id="navbar">
         <div id="resume-logo"><span class="material-symbols-outlined"
-                style="color: rgba(38, 141, 172, 0.589);font-size: 25px;font-weight: bold;">
+                style="color: rgba(38, 141, 172, 0.589);font-size: 25px;font-weight: bold; " onclick="reload()">
                 description
             </span></div>
         <div id="download-btn">
-            <span class="material-symbols-outlined">arrow_downward</span>
-            <button id="download-pdf">Download PDF</button>
+            <button class="button-77">Download PDF</button>
         </div>
     </nav>
-    <div id="parent-container">
+    <div id="parent-container" >
         <!-- body starting -->
         <div id="body">
             <!-- template type part -->
             <div id="template-type">
-                <p id="template-type-text">Template Type</p>
-                <select name="templeType" id="type">
+                <p  class="input-text1-style" >Template Type</p>
+                <select name="templeType" id="type" style="background-color: rgb(255,131,45);">
                     <option value="choose">....Choose....</option>
-                    <option value="Two-Column" id="two">Two-Column</option>
+                    <option value="Two-Column" id="two" >Two-Column</option>
                     <option value="Minimalist" id="min">Minimalist</option>+
                 </select>
 
             </div>
             <p id="add-file" style="display: none;">
-                <span id="addPhoto" style=" font-weight: bold; font-size: 15px;">Add photo</span>
-                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"
-                    style="border-radius: 4px;width: 90px;display: none;">
+                <span  class="input-text-style" style=" font-weight: bold; font-size: 15px;">Add photo</span>
+                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)">
             </p>
 
-            <div id="header-color-changers">
+            <div id="header-color-changers" style="display: flex; flex-direction: column;gap: 20px;">
                 <!-- hheader color changer -->
-                <p id="header-bg-color">Body Background Color</p>
-                <input id="bg-color" type="color" style="margin-bottom: 10px;">
+                <div class="bg-color-child">
+                    <p class="input-text1-style" style="font-size: 23px;margin-bottom: 15px;">Body Background Color</p>
+                    <input id="bg-color" type="color" style="margin-bottom: 10px;">
+                </div>
+               
 
                 <!-- header text color changer -->
-                <p id="header-text-color">Header-Text Color</p>
-                <input type="color" id="text-col">
+                <div class="tex-color-child" >
+                    <p class="input-text1-style" style="font-size: 23px;margin-bottom: 15px;">Header-Text Color</p>
+                    <input type="color" id="text-col" >
+                </div>
+               
             </div>
 
             <!-- personal detail  thta input user will give -->
             <div id="personal-detail-container">
-                <p id="personal-detail">Personal Details</p>
+                <p  class="input-text1-style">Personal Details</p>
                 <input type="text" placeholder="Name" id="name" class="personal-name" maxlength="25">
                 <input type="text" placeholder="E-mail ID" id="email" class="personal-name" maxlength="40">
                 <input type="tel" placeholder="Phone Number" id="num" class="personal-name" maxlength="16">
@@ -63,27 +67,27 @@
 
             <!-- profesional details input user -->
             <div id="proffesional-detail-container">
-                <p id="proffesional-details">Professional Details</p>
-                <input type="text" placeholder="Wanted job title" id="job-title" maxlength="15">
-                <textarea name="" id="job-desc" cols="30" rows="5" placeholder="Description" maxlength="170"></textarea>
-                <input type="text" placeholder="Skills" id="job-skill" maxlength="70">
-                <input type="text" placeholder="Languages" id="languages" maxlength="70">
-                <input type="text" placeholder="Hobbies" id="hobbies" maxlength="70">
+                <p  class="input-text1-style">Professional Details</p>
+                <input type="text" placeholder="Wanted job title" id="job-title" maxlength="15" class="personal-name">
+                <textarea name="" id="job-desc" cols="30" rows="5" placeholder="Description" maxlength="170" class="personal-name"></textarea>
+                <input type="text" placeholder="Skills" id="job-skill" maxlength="70" class="personal-name">
+                <input type="text" placeholder="Languages" id="languages" maxlength="70" class="personal-name">
+                <input type="text" placeholder="Hobbies" id="hobbies" maxlength="70" class="personal-name">
             </div>
 
             <!-- employement part input user -->
             <div id="outer-employement-container">
-                <button id="add-employe">Add Employment</button>
+                <button id="add-employe" class="add-button" class="input-text-style">Add Employment</button>
                 <div id="inner-empl-parent">
                     <div id="inner-employement-container">
-                        <p id="emp-start">Start</p>
-                        <input type="date" id="emp-start-date" maxlength="10">
-                        <p id="emp-End">End</p>
-                        <input type="date" id="emp-end-date" maxlength="10">
-                        <input type="text" id="emp-title" placeholder="job title" maxlength="20">
-                        <input type="text" id="employer" placeholder="Employer" maxlength="70">
+                        <p  class="input-text-style" style="font-size: 15px;font-weight: 700;">Start</p>
+                        <input type="date" id="emp-start-date" maxlength="10" class="personal-name" >
+                        <p  class="input-text-style" style="font-size: 15px;font-weight: 700;">End</p>
+                        <input type="date" id="emp-end-date" maxlength="10" class="personal-name">
+                        <input type="text" id="emp-title" placeholder="job title" maxlength="20" class="personal-name">
+                        <input type="text" id="employer" placeholder="Employer" maxlength="70" class="personal-name">
                         <textarea maxlength="202" name="" id="emp-desc" cols="30" rows="5"
-                            placeholder="Description"></textarea>
+                            placeholder="Description" class="personal-name"></textarea>
                     </div>
                 </div>
 
@@ -91,33 +95,32 @@
 
             <!-- project section and onclock button is also user input here -->
             <div id="outer-project-container">
-                <button id="project-btn">Add Project</button>
+                <button id="project-btn" class="add-button" class="input-text-style">Add Project</button>
                 <div id="inner-proj-parent">
                     <div id="inner-project-container">
-                        <p id="proj-start">Start</p>
-                        <input type="date" id="proj-start-date">
-                        <p id="proj-end">End</p>
-                        <input type="date" id="proj-end-date">
-                        <input type="text" id="proj-title" placeholder="Project-title" maxlength="20">
+                        <p  class="input-text-style" style="font-size: 15px;font-weight: 700;">Start</p>
+                        <input type="date" class="personal-name">
+                        <p  class="input-text-style" style="font-size: 15px;font-weight: 700;">End</p>
+                        <input type="date" id="proj-end-date" class="personal-name">
+                        <input type="text" id="proj-title" placeholder="Project-title" maxlength="20" class="personal-name">
                         <textarea maxlength="300" name="" id="proj-desc" cols="30" rows="5"
-                            placeholder="Description"></textarea>
+                            placeholder="Description" class="personal-name"></textarea>
                     </div>
                 </div>
             </div>
 
             <!-- education details and onclock button is also user input here  -->
             <div id="outer-education-detail">
-                <h3 id="education-title">Educational Background</h3>
-                <button id="edu-btn">Add Education</button>
+                <button id="edu-btn" class="add-button">Add Education</button>
                 <div id="inner-edu-parent">
                     <div id="inner-education-detail">
-                        <p id="edu-start">Start</p>
-                        <input type="date" id="edu-start-date" maxlength="10">
-                        <p id="edu-end">End</p>
-                        <input type="date" id="edu-end-date" maxlength="10">
-                        <input type="text" id="edu-qualif" placeholder="Qualification" maxlength="20">
-                        <input type="text" id="edu-sch-colleg" placeholder="School/College" maxlength="30">
-                        <textarea maxlength="200" id="edu-desc" cols="30" rows="5" placeholder="Description"></textarea>
+                        <p  class="input-text-style" style="font-size: 15px;font-weight: 700;">Start</p>
+                        <input type="date"  maxlength="10" class="personal-name">
+                        <p  class="input-text-style" style="font-size: 15px;font-weight: 700;">End</p>
+                        <input type="date" id="edu-end-date" maxlength="10" class="personal-name">
+                        <input type="text" id="edu-qualif" placeholder="Qualification" maxlength="20" class="personal-name">
+                        <input type="text" id="edu-sch-colleg" placeholder="School/College" maxlength="30" class="personal-name">
+                        <textarea maxlength="200" id="edu-desc" cols="30" rows="5" placeholder="Description" class="personal-name"></textarea>
                     </div>
                 </div>
             </div>
@@ -225,14 +228,14 @@
                 <div id="res-bdy-right" style="display: flex;flex-direction: column;flex-wrap: wrap;">
                     <!-- right-sided summary part -->
                     <div id="res-bdy-ryt-sum">
-                        <p id="summary-tex">SUMMARY</p>
+                        <p id="summary-tex" class="res-body-ryt-text">SUMMARY</p>
                         <div id="res-bdy-ryt-contain">
                             i want to be a SDE at Microsoft!
                         </div></br>
                     </div>
                     <!-- right sided-body's experience part -->
                     <div id="res-bdy-ryt-exp-field">
-                        <p id="res-bdy-right-exp-text">PROFESSIONAL EXPERIENCE</p>
+                        <p id="res-bdy-right-exp-text"  class="res-body-ryt-text">PROFESSIONAL EXPERIENCE</p>
                         <div id="res-bdy-rt-exp-contain">
                             <div id="fetched-jobtitle-date" style="display: flex;justify-content: space-between;">
                                 <li id="fetched-job-title">sde</li>
@@ -247,7 +250,7 @@
                     </div><br>
                     <!-- right sided body's project part -->
                     <div id="res-bdy-ryt-proj-field">
-                        <p id="res-bdy-right-proj-text">PROJECT</p>
+                        <p id="res-bdy-right-proj-text"  class="res-body-ryt-text">PROJECT</p>
                         <div id="res-bdy-rt-proj-contain">
                             <div id="fetched-project-date" style="display: flex;justify-content: space-between;">
                                 <li id="fetched-proj-title">Resume Generator</li>
@@ -261,7 +264,7 @@
                     </div><br>
                     <!-- right sided body's education part -->
                     <div id="res-bdy-ryt-edu-field">
-                        <p id="res-bdy-right-edu-text">EDUCATION</p>
+                        <p id="res-bdy-right-edu-text"  class="res-body-ryt-text">EDUCATION</p>
                         <div id="res-bdy-rt-edu-contain">
                             <div id="fetched-jobtitle-date" style="display: flex;justify-content: space-between;">
                                 <li id="fetched-qualif-title">Btech</li>
