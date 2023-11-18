@@ -4,7 +4,7 @@
 <h1>Description</h1>
 <hr style="font-weight:bolder">
 
-<h3>🚀 Exciting News: Introducing My Resume Generator Project! 🚀</h3> 
+<h3>🚀 Introducing My Resume Generator Project! 🚀</h3> 
 
 The provided HTML code constitutes a web page, presumably designed for creating a resume. The structure includes a navbar with a logo and a "Download PDF" button. The form is divided into sections for personal details, professional information, employment history, projects, and education. Each section contains input fields for relevant information such as name, email, skills, and more.
 
