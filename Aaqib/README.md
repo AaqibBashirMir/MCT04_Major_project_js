@@ -23,6 +23,41 @@ Media queries are utilized to make the application responsive, adjusting styles 
 
 In summary, the CSS code demonstrates a well-organized and responsive design approach for the resume generator, covering a range of elements and layouts to enhance user interaction and readability on various screen sizes. If you have specific inquiries or if there's a particular aspect you'd like further clarification on, please feel free to ask.
 
+
+🚀<h3>Here starts functionality with JavaScript </h3>
+<h4>Template Type Changer:</h4>
+
+The code begins with selecting HTML elements representing different sections of the resume (#type, #resume-field, #res-header-cont, #res-bdy-left).
+An event listener is added to the #type element to detect changes in the selected template type (presumably a dropdown).
+Depending on the selected template type ("Two-Column" or "Minimalist"), the code dynamically adjusts various styles, widths, and displays to change the appearance of the resume.
+<h4>Responsive Design:</h4>
+
+There's a conditional statement checking the screen width, and if it's less than or equal to 460 pixels, it adjusts the width of an element with the id #body to 200 pixels.
+<h4>Logo Reload:</h4>
+
+There's a reload function defined, which likely reloads the page. This function is associated with a logo on the page.
+<h4>Background and Text Color Changers:</h4>
+
+Event listeners are set up for input elements with the ids #bg-color and #text-col. These listeners change the background color of an element with the id #res-bdy-left and the text color of certain resume elements.
+<h4>User Image Upload:</h4>
+
+There's a function named loadFile that gets triggered when the user selects an image file. It displays the selected image on the page.
+<h4>Signature Pad:</h4>
+
+The code initializes a signature pad using the SignaturePad library, allowing users to draw a signature. There's also a button (#clear-btn) to clear the signature.
+<h4>Fetching User Input for Resume:</h4>h4>
+
+There are several event listeners capturing user input for various resume sections, including name, job title, email, location, contact number, summary, skills, hobbies, languages, etc.
+The user inputs are dynamically updated in corresponding sections of the resume.
+<h4>Section Display Toggling (Employment, Project, Education):</h4>
+
+There are event listeners for buttons (#add-employe, #project-btn, #edu-btn) that reveal inner HTML elements related to employment, project, and education sections, respectively.
+User inputs for these sections are captured and dynamically updated in the resume.
+<h4>Resume Download Functionality:</h4>
+
+There's a button (#download-btn) that, when clicked, adjusts styling and initiates the printing of the resume, presumably for downloading or printing purposes.
+Overall, your JavaScript code is responsible for creating a dynamic and interactive user experience in a web application where users can customize and generate their resumes based on different templates and input data. The code includes functionality for handling various user inputs, adjusting styles based on template choices, and managing the display of different resume sections.
+
 Thank you for your attention. Feel free to explore the HTML code further and customize it for your needs.
 
 
