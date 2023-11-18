@@ -70,3 +70,7 @@ Thank you for your attention. Feel free to explore the HTML code further and cus
 ![Screenshot 2023-11-18 222659](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/35392012/2eecd069-9054-4116-8964-914d6144a648)
 
 
+![Screenshot 2023-11-18 222820](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/35392012/79bf6dda-2b31-4b3a-8e4d-3c9dc55c9b45)
+
+
+![Screenshot 2023-11-18 222851](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/35392012/1e53a790-9768-4c56-9ad2-b70e040463e4)
