@@ -4,15 +4,15 @@
 https://aaqibbashirmir.github.io/MCT04_TEAM02/
 <h2>Description:-</h2>
 This is the readme of the whole project with project names, and  the collabrators and there hosted links:<br>
-1.Project 1:-Resume Generator.
-1.Project 2:-Payment Integration.
-1.Project 1:-Flipkart Sorting and filtering.
-1.Project 1:-Typing Game.
-1.Project 1:-Chrome Extension
-1.Project 1:-Mine Sweeper.
-1.Project 1:-Trello Cards.
-1.Project 1:-Invoice Generator.
-1.Project 1:-Code Editor.
+1.Project 1:-Resume Generator.<br>
+1.Project 2:-Payment Integration.<br>
+1.Project 1:-Flipkart Sorting and filtering.<br>
+1.Project 1:-Typing Game.<br>
+1.Project 1:-Chrome Extension<br>
+1.Project 1:-Mine Sweeper.<br>
+1.Project 1:-Trello Cards.<br>
+1.Project 1:-Invoice Generator.<br>
+1.Project 1:-Code Editor.<br>
 
 
 <h3>Collabrators:-</h3>
