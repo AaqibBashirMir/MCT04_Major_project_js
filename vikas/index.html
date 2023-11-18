@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="script.js"></script> -->
+    <script src="https://kit.fontawesome.com/1068d71b0b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="mainarea">
+    <div class="editors">
+        <h3 class=" heading" ><i class="fa-brands fa-html5"  id="heading1"></i>HTML</h3>
+        <textarea id="html" onkeyup="run()"></textarea>
+        <button class="btn"onclick="openPopup()">CopyHTML</button>
+        <div class="popup" id="popup">
+            <h2 class="vikas">Copied!</h2>
+            <p class="roy">You are ready to rock</p>
+            <button class="ok" onclick="closePopup()">OK</button>
+        </div>
+    </div>
+    <div class="editors">
+        <h3 class="heading"><i class="fa-brands fa-css3"id="heading2" ></i>CSS</h3>
+        <textarea id="css"onkeyup="run()"></textarea>
+        <button id="vk">CopyCSS</button>
+    </div>
+    <div class="editors">
+        <h3 class="heading"><i class="fa-brands fa-js" id="heading3" ></i>JS</h3>
+        <textarea id="js"onkeyup="run()"></textarea>
+        <button  class="btn">CopyJS</button>
+    </div>
+</div>
+
+<div class="output">
+    <iframe id="code"></iframe>
+</div>
+
+<script>
+    function run(){
+        let htmlCode=document.getElementById("html").value;
+        let cssCode=document.getElementById("css").value;
+        let jsCode=document.getElementById("js").value;
+        let output=document.getElementById("code");
+        output.contentDocument.body.innerHTML=htmlCode+"<style>"+ cssCode + "</style>" 
+        output.contentWindow.eval(jsCode);
+    }
+
+let popup=document.getElementById("popup");
+function openPopup(){
+    popup.classList.add("open-popup");
+
+}
+function closePopup(){
+    popup.classList.remove("open-popup");
+
+}
+    
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
