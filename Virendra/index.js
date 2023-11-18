@@ -78,6 +78,7 @@ function createNewBoard() {
     closeForm();
     addBoard_button();
     addCard_btn();
+    addingForm();
 };
 
 //-----------------------Adding cards------------------------
@@ -122,11 +123,7 @@ function createNewCard(ele) {
         <p class="card-footer-item"></p>
     </div> 
 `;
-    // let div1 = document.createElement('div');
-    // div1.classList.add('custom-input');
-    // div1.innerHTML = `<div class="board-add-card">+ Add Card</div>`;
-    // div.appendChild(div1);
-    // console.log(ele.target.innerHTML);
+  
     if (ele.classList.contains('board')) {
         let div1 = document.createElement('div');
         div1.classList.add('custom-input');
@@ -144,6 +141,7 @@ function createNewCard(ele) {
     closeForm();
     updateNoOfCards();
     popupDashboardDataUpdate();
+    
 };
 
 
@@ -342,7 +340,7 @@ function onCardClick(event) {
         date_update.innerText = event.target.children[3].children[0].innerText;
     }
 }
-popupDashboardDataUpdate();
+// popupDashboardDataUpdate();
 function popupDashboardDataUpdate() {
     let title = document.querySelector('#title');
     let desc = document.querySelector('.desc');
@@ -358,7 +356,8 @@ function popupDashboardDataUpdate() {
     localStorage.setItem(card_id + "_bgcolor", title.style.backgroundColor);
 
     let id = localStorage.getItem("card_id");
-    let card = document.querySelector('#' + id);
+    let card = document.querySelector('#' +id);
+    // console.log(card.innerText);
     card.children[0].children[0].children[0].innerText = localStorage.getItem(id + "_title");
     card.children[0].children[0].children[0].style.backgroundColor = localStorage.getItem(id + "_bgcolor");
     card.children[1].innerText = localStorage.getItem(id + "_card");

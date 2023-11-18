@@ -92,7 +92,7 @@ main .container {
     margin: 5px;
     align-items: center;
     justify-content: center;
-    min-height: 250px;
+    /* min-height: 250px; */
   
 }
 .add_board_btn{
@@ -133,7 +133,7 @@ main .container {
     cursor: pointer;
     width: 100%;
     background-color: rgba(216, 200, 211, 0.748);
-   height:150px;
+   /* height:150px; */
 }
 
 .board-add-card {
