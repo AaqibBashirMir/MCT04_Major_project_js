@@ -3,6 +3,8 @@ HOSTED LINK:
 
 WORKING FLOW:
 
+https://www.dropbox.com/scl/fi/n3y664f7x5dgfw1fhtc63/PaymentIntegration.mov?rlkey=2xneh44egj4jwxborlv6b69rb&dl=0
+
 UI LINK:
 
 https://aaqibbashirmir.github.io/MCT04_TEAM02/ANKIT_PAYMENTintegration/public/
