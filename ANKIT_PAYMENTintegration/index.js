@@ -2,13 +2,19 @@ const express = require('express');
 const app = express();
 const port = 3001;
 
-
+const path = require('path');
 const Razorpay=require("razorpay");
 const cors=require("cors");
 
 
 app.use(express.json());
 app.use(cors());
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Define a route to handle requests and send the 'index.html' file
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 app.get("/",(req,res)=>{
     res.send("hello world!");
 });
