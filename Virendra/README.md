@@ -54,3 +54,19 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 2. **Hosted Link:**
    ```link
     https://aaqibbashirmir.github.io/MCT04_TEAM02/Virendra
+
+ # pages
+   <h2>Login</h2>
+
+   ![image](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/87600216/ac396d62-4274-477b-ae9e-2f113a6fba32)
+
+   <h2>Dashboard</h2>
+   
+   ![image](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/87600216/c11c3bed-f452-46db-a1ab-fcce3a301f21)
+
+   <h2>New Board</h2>
+   
+   ![image](https://github.com/AaqibBashirMir/MCT04_TEAM02/assets/87600216/22c160bf-ec80-4e05-b2a5-ee89fef17232)
+   
+
+
