@@ -5,15 +5,12 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    background-color: rgb(243, 243, 243);
 
-}
 
 #navbar {
+    background-color: rgb(204, 197, 197);
     width: 100%;
     height: auto;
-    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,40 +25,109 @@ body {
     margin: 6px;
 }
 
-#download-btn {
-    margin: 6px;
-    display: flex;
+
+
+
+.button-77 {
     align-items: center;
-    background-color: green;
-    color: white;
-    font-size: 24px;
+    appearance: none;
+    background-clip: padding-box;
+    background-color: initial;
+    background-image: none;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
     cursor: pointer;
-    width: 130px;
-    border-radius: 4px;
-    height: 30px;
-
-}
-
-
-#download-pdf {
-    background-color: green;
-    border: none;
-    color: white;
-    font-size: 15px;
-    border-radius: 2px;
-    width: 100px;
-
-}
-
-#download-pdf:hover {
-    background-color: darkgreen;
-}
-
-#download-btn:hover {
-    background-color: darkgreen;
-
-}
-
+    display: inline-block;
+    flex-direction: row;
+    flex-shrink: 0;
+    font-family: Eina01,sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    justify-content: center;
+    line-height: 24px;
+    margin: 0;
+    min-height: 64px;
+    outline: none;
+    overflow: visible;
+    padding: 19px 26px;
+    pointer-events: auto;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: auto;
+    word-break: keep-all;
+    z-index: 0;
+  }
+  
+  @media (min-width: 768px) {
+    .button-77 {
+      padding: 19px 32px;
+    }
+  }
+  
+  .button-77:before,
+  .button-77:after {
+    border-radius: 80px;
+  }
+  
+  .button-77:before {
+    background-color: rgba(249, 58, 19, .32);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -2;
+  }
+  
+  .button-77:after {
+    background-color: initial;
+    background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+    bottom: 4px;
+    content: "";
+    display: block;
+    left: 4px;
+    overflow: hidden;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    transition: all 100ms ease-out;
+    z-index: -1;
+  }
+  
+  .button-77:hover:not(:disabled):after {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition-timing-function: ease-in;
+  }
+  
+  .button-77:active:not(:disabled) {
+    color: #ccc;
+  }
+  
+  .button-77:active:not(:disabled):after {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    top: 4px;
+  }
+  
+  .button-77:disabled {
+    cursor: default;
+    opacity: .24;
+  }
 #body {
     display: flex;
     flex-direction: column;
@@ -79,21 +145,50 @@ body {
 
 }
 
+
 #template-type-text {
     font-weight: bold;
     font-size: 15px;
 }
 
 #type {
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 209, 173);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     width: 450px;
-    height: 25px;
+    padding: 0.6rem 1rem;
     /* border: 2px blue solid; */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#header-bg-color {
-    font-weight: bold;
-    font-size: 15px;
+#bg-color,
+#text-col {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#bg-color::-webkit-color-swatch,
+#text-col::-webkit-color-swatch {
+    border-radius: 8px;
+    border: none;
+}
+
+#bg-color::-moz-color-swatch,
+#text-color::-moz-color-swatch {
+    border-radius: 15px;
+    border: none;
+}
+
+#header-color-changers img {
+    display: none;
 }
 
 #header-text-color {
@@ -110,16 +205,15 @@ body {
     font-weight: bold;
 }
 
-#name,
-#email,
-#number,
-#city {
-    border: none;
+.personal-name {
+    border: 2px black dashed;
     height: 30px;
-    padding: 4px;
+    padding: 1rem;
     outline: none;
 
 }
+
+
 
 #proffesional-detail-container {
     display: flex;
@@ -130,21 +224,10 @@ body {
     font-weight: bold;
 }
 
-#job-title,
-#hobbies,
-#languages,
-#job-skill {
-    border: none;
-    height: 30px;
-    padding: 4px;
-    outline: none;
-}
+
 
 #job-desc {
-    outline: none;
-    border: none;
-    padding: 4px;
-    overflow: hidden;
+    height: 100px;
 }
 
 #outer-employement-container {
@@ -170,41 +253,45 @@ body {
 
 }
 
+.input-text1-style {
+    font-size: 30px;
+    font-weight: 500;
+
+}
+
+
 #inner-empl-parent {
     display: none;
 }
 
-#add-employe {
-    height: 30px;
-    background-color: brown;
-    border: none;
-    font-size: 13px;
-    font-weight: 600;
-    color: bisque;
-}
-
-#add-employe:hover {
+.add-button {
+    padding: 12px;
+    width: 28rem;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    border: 0px;
+    font-weight: 700;
+    box-shadow: 0px 0px 14px -7px #f09819;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
     cursor: pointer;
-    background-color: darkred;
 }
 
+.add-button:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
 
-#emp-start-date,
-#emp-end-date,
-#emp-title,
-#employer {
-
-    border: none;
-    height: 30px;
-    padding: 4px;
-    outline: none;
+.add-button:active {
+    transform: scale(0.95);
 }
 
 #emp-desc {
-    outline: none;
-    border: none;
-    padding: 4px;
-    overflow-y: hidden;
+    height: 100px;
 }
 
 #outer-project-container {
@@ -231,63 +318,14 @@ body {
     display: none;
 }
 
-#outer-education-detail {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 450px;
-    font-size: 15px;
-    font-size: 15px;
-    font-weight: 500;
-}
+
 
 #edu-desc {
-    outline: none;
-    border: none;
-    padding: 4px;
-    overflow-y: hidden;
-}
-
-
-#edu-btn {
-    height: 30px;
-    background-color: brown;
-    border: none;
-    font-size: 13px;
-    font-weight: 600;
-    color: bisque;
-}
-
-#edu-btn:hover {
-    cursor: pointer;
-    background-color: darkred;
-}
-
-#edu-start-date,
-#edu-end-date,
-#edu-qualif,
-#edu-sch-colleg {
-    border: none;
-    height: 30px;
-    padding: 4px;
-    outline: none;
-}
-
-
-#proj-start-date,
-#proj-end-date,
-#proj-title {
-    border: none;
-    height: 30px;
-    padding: 4px;
-    outline: none;
+    height: 100px;
 }
 
 #proj-desc {
-    outline: none;
-    border: none;
-    padding: 4px;
-    overflow-y: hidden;
+    height: 100px;
 }
 
 
@@ -306,28 +344,12 @@ body {
     display: none;
 }
 
-#project-btn {
-    height: 30px;
-    background-color: brown;
-    border: none;
-    font-size: 13px;
-    font-weight: 600;
-    color: bisque;
-}
-
-#project-btn:hover {
-    cursor: pointer;
-    background-color: darkred;
-}
-
-
-
-
 #parent-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     gap: 5px;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fd9f85c9 100%);
 }
 
 #resume-field {
@@ -341,6 +363,7 @@ body {
     height: 1180px;
     /* display: none; */
     overflow-x: hidden;
+    background-color: white;
 
 }
 
@@ -350,6 +373,7 @@ body {
     height: 190px;
     width: 600px;
     margin-left: -100px;
+    background-color: white;
     /* border: 1px red solid; */
     /* padding: 15px; */
 }
@@ -416,7 +440,7 @@ body {
 
 #res-bdy-right {
     padding: 10px;
-    background-color: rgba(161, 42, 165, 0.116);
+    background-color:white;
     height: 1000px;
     width: 850px;
     /* border: 2px black solid; */
@@ -430,6 +454,7 @@ body {
     width: 300px;
     margin-top: -200px;
     /* box-shadow: 0 0 5px lightgray; */
+    padding-left: 20px;
 
 }
 
@@ -448,10 +473,7 @@ body {
     font-weight: 500;
 }
 
-#summary-tex,
-#res-bdy-right-exp-text,
-#res-bdy-right-proj-text,
-#res-bdy-right-edu-text {
+.res-body-ryt-text {
     font-weight: bold;
     color: rgb(243, 243, 243);
     background-color: rgb(43, 153, 187);
@@ -464,7 +486,7 @@ body {
     font-size: 15px;
     font-weight: 500;
     overflow: hidden;
-    
+
 
 }
 
@@ -671,7 +693,8 @@ body {
         overflow: hidden;
         max-width: 290px;
     }
-    #res-bdy-ryt-contain{
+
+    #res-bdy-ryt-contain {
         max-height: 200px;
         font-size: 15px;
         font-weight: 500;
@@ -709,7 +732,7 @@ body {
         box-shadow: 0 0 5px gray;
         overflow-y: hidden;
         width: 400px;
-        height:1100px;
+        height: 1100px;
         /* display: none; */
         overflow-x: hidden;
         /* border: 1px red solid; */
@@ -790,19 +813,20 @@ body {
         width: 270px;
         /* border: 2px black solid; */
     }
-    
-#clear-btn {
-    background-color: rgb(121, 118, 118);
-    height: 20px;
-    width: 130px;
-    border: none;
-    text-align: center;
-    color: white;
 
-}
-#signature-pad{
-    width: 130px;
-}
+    #clear-btn {
+        background-color: rgb(121, 118, 118);
+        height: 20px;
+        width: 130px;
+        border: none;
+        text-align: center;
+        color: white;
+
+    }
+
+    #signature-pad {
+        width: 130px;
+    }
 
     #summary-tex,
     #res-bdy-right-exp-text,
@@ -851,7 +875,8 @@ body {
         overflow: hidden;
         max-width: 210px;
     }
-    #res-bdy-ryt-contain{
+
+    #res-bdy-ryt-contain {
         max-height: 200px;
         font-size: 15px;
         font-weight: 500;
@@ -993,7 +1018,7 @@ body {
         word-wrap: break-word;
         /* display: none; */
     }
- 
+
 
 }
 
@@ -1005,6 +1030,7 @@ body {
         /* width: 600px; */
 
     }
+    
 
     #resume-field {
         display: flex;
@@ -1028,7 +1054,8 @@ body {
         width: 450px;
         /* border: 2px black solid; */
     }
-    #res-bdy-left{
+
+    #res-bdy-left {
         height: 1400px;
     }
 
