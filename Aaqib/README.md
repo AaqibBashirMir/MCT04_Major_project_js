@@ -61,6 +61,7 @@ Overall, your JavaScript code is responsible for creating a dynamic and interact
 
 Thank you for your attention. Feel free to explore the HTML code further and customize it for your needs.<br>
 
-https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210304115719/animation1111.jpg
+<img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210304115719/animation1111.jpg" height="100px" width="200px">
+
 
 
