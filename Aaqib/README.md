@@ -24,6 +24,7 @@ Media queries are utilized to make the application responsive, adjusting styles 
 
 In summary, the CSS code demonstrates a well-organized and responsive design approach for the resume generator, covering a range of elements and layouts to enhance user interaction and readability on various screen sizes. If you have specific inquiries or if there's a particular aspect you'd like further clarification on, please feel free to ask.
 
+<img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210304115719/animation1111.jpg" height="250px" width="600px">
 
 🚀<h3>Here starts functionality with JavaScript </h3>
 <h4>Template Type Changer:</h4>
@@ -61,7 +62,7 @@ Overall, your JavaScript code is responsible for creating a dynamic and interact
 
 Thank you for your attention. Feel free to explore the HTML code further and customize it for your needs.<br>
 
-<img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210304115719/animation1111.jpg" height="100px" width="200px">
+
 
 
 
