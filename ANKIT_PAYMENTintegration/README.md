@@ -1,6 +1,8 @@
 
 HOSTED LINK:
 
+WORKING FLOW:
+
 UI LINK:
 
 https://aaqibbashirmir.github.io/MCT04_TEAM02/ANKIT_PAYMENTintegration/public/
